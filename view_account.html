@@ -15,6 +15,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <link href="css/view_list_account.css" rel="stylesheet">
     <link href="css/home.css" rel="stylesheet">
+    <link href="css/notfication.css" rel="stylesheet">
     <script src="js/view_list_account.js"></script>
 </head>
 
@@ -25,11 +26,16 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse left_menu" id="navbarSupportedContent">
                 <!-- Navbar-nav with FORM -->
-
-                <a class=""><i class="bi bi-bell-fill"></i></a>
-
+                <form class="d-flex">
+                    <button class="btn bg-transparent" type="submit">
+                    <a class="notification">
+                        <i class="bi bi-bell-fill"></i>
+                        <span class="badge badge-danger badge-counter">3+</span>
+                    </a>
+                    </button>
+                </form>
                 <form class="">
-                    <button class="btn btn-outline-dark bg-transparent" type="submit">
+                    <button class="btn bg-transparent" type="submit">
                     <li class="nav-item dropdown" style="list-style-type: none;">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-square me-1"></i></a>
