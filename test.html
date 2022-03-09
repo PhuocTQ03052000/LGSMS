@@ -22,27 +22,33 @@
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(28, 100, 168, 0.521); border-bottom: 1px solid white;">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="home.html">Vanh Sibun Gas</a>
-            <form class="d-flex">
-                <button class="btn btn-outline-dark bg-transparent" type="submit">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Navbar-nav with FORM -->
+                <form class="d-flex" action="/somepage">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Nhập từ khóa...">
+                    <button class="btn btn-search" type="submit"><i class="bi bi-search me-1"></i></button>
+                </form>
+                <form class="d-flex">
+                </form>
+                <form class="d-flex">
+                    <button class="btn btn-outline-dark bg-transparent" type="submit">
                     <i class="bi bi-bell-fill"></i>
                     </button>
-            </form>
-            <form class="">
-                <button class="btn btn-outline-dark bg-transparent" type="submit">
+                </form>
+                <form class="">
+                    <button class="btn btn-outline-dark bg-transparent" type="submit">
                     <li class="nav-item dropdown" style="list-style-type: none;">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-square me-1"></i></a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="list-style: none;">
                             <li><a class="dropdown-item" href="view_profile.html">Hồ sơ của tôi</a></li>
-                            <li><a class="dropdown-item" href="#!">Theo dõi đơn hàng</a></li>
-                            <li>
-                                <hr class="dropdown-divider" />
-                            </li>
                             <li><a class="dropdown-item" href="Login.html">Đăng xuất</a></li>
                         </ul>
                     </li>
-                </button>
-            </form>
+                    </button>
+                </form>
+            </div>
         </div>
     </nav>
     <div class="container">
@@ -54,7 +60,7 @@
                             <h2>Quản lý <b>tài khoản</b></h2>
                         </div>
                         <div class="col-sm-6">
-                            <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Thêm tài khoản</span></a>
+                            <a href="#addAccountModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Thêm tài khoản</span></a>
                         </div>
                     </div>
                 </div>
@@ -165,7 +171,7 @@
         </div>
     </div>
     <!-- Edit Modal HTML -->
-    <div id="addEmployeeModal" class="modal fade">
+    <div id="addAccountModal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
                 <form>
@@ -200,7 +206,7 @@
         </div>
     </div>
     <!-- Edit Modal HTML -->
-    <div id="editEmployeeModal" class="modal fade">
+    <div id="editAccountModal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
                 <form>
