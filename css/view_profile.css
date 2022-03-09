@@ -1,13 +1,9 @@
 label {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 h4 {
-    color: white
-}
-
-.user_email {
-    color: white;
+    color: rgb(0, 0, 0)
 }
 
 footer {
@@ -17,4 +13,21 @@ footer {
 footer p,
 h6 {
     color: white;
+}
+
+.container_profile {
+    margin-left: 15%;
+    margin-right: 15%;
+    border-left: 4px solid #6c757d;
+    border-right: 4px solid #6c757d;
+}
+
+.profile_frame {
+    margin-Left: 15%;
+    margin-right: 15%;
+}
+
+.profile-button {
+    margin-top: 5%;
+    margin-left: 60%;
 }

@@ -270,3 +270,7 @@ input:checked+.slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
+.left_menu {
+    margin-left: 50%;
+}
