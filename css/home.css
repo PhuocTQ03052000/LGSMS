@@ -7323,7 +7323,7 @@ fieldset:disabled .btn {
     display: flex !important;
 }
 
-.d-flex a {
+.d-flex a i {
     text-decoration: none;
     color: white;
 }
