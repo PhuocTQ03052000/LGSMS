@@ -10925,7 +10925,7 @@ body {
     font-size: 16px;
     line-height: 1.8;
     font-weight: normal;
-    color: gray;
+    color: #0000;
     position: relative;
     z-index: 0;
     padding: 0;
@@ -10938,7 +10938,7 @@ body:after {
     right: 0;
     bottom: 0;
     content: '';
-    background: #000;
+    background: #0000;
     opacity: .3;
     z-index: -1;
 }
