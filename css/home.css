@@ -7323,7 +7323,7 @@ fieldset:disabled .btn {
     display: flex !important;
 }
 
-.d-flex a i {
+.d-flex a {
     text-decoration: none;
     color: white;
 }
@@ -7755,12 +7755,6 @@ fieldset:disabled .btn {
 
 .align-self-stretch {
     align-self: stretch !important;
-}
-
-.bgimage {
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    ;
 }
 
 .order-first {
