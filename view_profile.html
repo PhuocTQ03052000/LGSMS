@@ -100,14 +100,13 @@
                         </div>
                         <div class="col-md-12"><label class="labels">Địa chỉ*</label><input type="text" class="form-control" placeholder="nhập địa chỉ của bạn" value=""></div>
                         <div class="col-md-12"><label class="labels">Email*</label><input type="text" class="form-control" placeholder="nhập địa chỉ email của bạn" value=""></div>
-                        <div class="text-center "><button class="btn btn-primary profile-button" type="submit" onclick="confirmFunction()">Lưu thông tin</button>
-                            <p id="demo"></p>
+                        <div class="col-md-12 "><button class="btn btn-primary profile-button" type="submit" onclick="confirmFunction()">Lưu thông tin</button>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <!-- Footer -->
     <footer class="text-center text-muted">
@@ -196,13 +195,12 @@
     <script src="js/main.js"></script>
     <script>
         function confirmFunction() {
-            var txt;
-            if (confirm("Bạn có chắc chắn với những thay đổi này?")) {
-                window.open("");
+            if (confirm("Bạn có chắc chắn với những thông tin này?")) {
+                location.reload();
+                alert("Lưu thành công!");
             } else {
-                txt = "You pressed Cancel!";
+                location.reload();
             }
-            document.getElementById("demo").innerHTML = txt;
         }
     </script>
 </body>
