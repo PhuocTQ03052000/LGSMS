@@ -53,37 +53,74 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Quản lý
+                Chức năng
             </div>
+
+            <!-- Nav Item - Phan Quyen Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAuthor" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Phân quyền</span>
+                </a>
+                <div id="collapseAuthor" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Admin phân quyền:</h6>
+                        <a class="collapse-item" href="listEmployee.html">Danh sách nhân viên</a>
+                    </div>
+                </div>
+
+            </li>
+
+            <!-- Heading -->
+            <!-- <div class="sidebar-heading">
+                Quản lý
+            </div> -->
             
              <!-- Nav Item - Tables -->
              <li class="nav-item">
-                <a class="nav-link" href="product.html">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseWarehouse" aria-expanded="true" aria-controls="collapse1">
+                <!-- <a class="nav-link" href="product.html"> -->
                     <i class="fas fa-fw fa-boxes"></i>
-                    <span>Sản phẩm</span></a>
+                    <span>Quản lý</span></a>
+                </a>
+                <div id="collapseWarehouse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Sản phẩm:</h6>
+                        <a class="collapse-item" href="product.html">Danh sách sản phẩm</a>
+                        <div class="collapse-divider"></div>
+                        <h6 class="collapse-header">Kho:</h6>
+                        <a class="collapse-item" href="storeage.html">Danh sách sản phẩm kho</a>
+                        <div class="collapse-divider"></div>
+                        <h6 class="collapse-header">Nhà cung cấp:</h6>
+                        <a class="collapse-item" href="supplier.html">Danh sách nhà cung cấp</a>
+                    </div>
+                </div>
             </li>
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-warehouse"></i>
-                    <span>Kho</span>
+                    <span>Nhân viên bán hàng</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Phân loại:</h6>
-                        <a class="collapse-item" href="tank.html">Vỏ bình gas</a>
-                        <a class="collapse-item" href="gas.html">Khối lượng gas</a>
+                        <h6 class="collapse-header">Đơn hàng:</h6>
+                        <a class="collapse-item" href="new_order.html">Danh sách đơn hàng mới</a>
+                        <a class="collapse-item" href="accepted_order.html">Danh sách đơn chấp nhận</a>
+                        <a class="collapse-item" href="rejected_order.html">Danh sách đơn từ chối</a>
+                        <h6 class="collapse-header">Nhập hàng:</h6>
+                        <a class="collapse-item" href="storeage.html">Danh sách hàng nhập</a>
                     </div>
                 </div>
             </li>
 
              <!-- Nav Item - Tables -->
-             <li class="nav-item">
+             <!-- <li class="nav-item">
                 <a class="nav-link" href="supplier.html">
                     <i class="fas fa-fw fa-user-tie"></i>
                     <span>Nhà cung cấp</span></a>
-            </li>
+            </li> -->
             
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
