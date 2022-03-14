@@ -29,108 +29,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">LGSMS</div>
-            </a>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Thống kê</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Chức năng
-            </div>
-
-            <!-- Nav Item - Phan Quyen Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAuthor" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Phân quyền</span>
-                </a>
-                <div id="collapseAuthor" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Admin phân quyền:</h6>
-                        <a class="collapse-item" href="listEmployee.html">Danh sách nhân viên</a>
-                    </div>
-                </div>
-
-            </li>
-
-            <!-- Heading -->
-            <!-- <div class="sidebar-heading">
-                Quản lý
-            </div> -->
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseWarehouse" aria-expanded="true" aria-controls="collapse1">
-                    <!-- <a class="nav-link" href="product.html"> -->
-                    <i class="fas fa-fw fa-boxes"></i>
-                    <span>Quản lý</span></a>
-                </a>
-                <div id="collapseWarehouse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Sản phẩm:</h6>
-                        <a class="collapse-item" href="product.html">Danh sách sản phẩm</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Kho:</h6>
-                        <a class="collapse-item" href="storeage.html">Danh sách sản phẩm kho</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Nhà cung cấp:</h6>
-                        <a class="collapse-item" href="supplier.html">Danh sách nhà cung cấp</a>
-                    </div>
-                </div>
-            </li>
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-warehouse"></i>
-                    <span>Nhân viên bán hàng</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Đơn hàng:</h6>
-                        <a class="collapse-item" href="new_order.html">Danh sách đơn hàng mới</a>
-                        <a class="collapse-item" href="accepted_order.html">Danh sách đơn chấp nhận</a>
-                        <a class="collapse-item" href="rejected_order.html">Danh sách đơn từ chối</a>
-                        <h6 class="collapse-header">Nhập hàng:</h6>
-                        <a class="collapse-item" href="storeage.html">Danh sách hàng nhập</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="supplier.html">
-                    <i class="fas fa-fw fa-user-tie"></i>
-                    <span>Nhà cung cấp</span></a>
-            </li> -->
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-        </ul>
+        <div include-html="../sidebar.html" id="sidebar" style="display: contents;"></div>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -149,46 +48,7 @@
                         </button>
                     </form>
 
-                    <!-- Topbar Search -->
-                    <!-- <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form> -->
-
-                    <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <!-- <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a> -->
-                        <!-- Dropdown - Messages -->
-                        <!-- <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li> -->
 
                         <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
@@ -955,7 +815,8 @@
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
-
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script src="../../js/include-html.min.js"></script>
 </body>
 
 </html>
