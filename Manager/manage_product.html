@@ -56,54 +56,80 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Quản lý sản phẩm</h1>
                         <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><i class="fas fa-plus fa-sm text-white-50"></i> Thêm sản phẩm</button>
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Điền thông tin sản phẩm</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="row" style="width: 100%;">
-                                                <div class="col-sm-12">
-                                                    <div class="row">
-                                                        <div class="col-8 col-sm-5 text-center">
-                                                            <img src="img/undraw_posting_photo.svg" alt="..." class="img-thumbnail">
-                                                            <button type="button" class="btn btn-primary ">Tải ảnh</button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Điền thông tin sản phẩm</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="row" style="width: 100%;">
+                                            <div class="col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-8 col-sm-5 text-center">
+                                                        <img src="img/undraw_posting_photo.svg" alt="..."
+                                                            class="img-thumbnail">
+                                                        <button type="button" class="btn btn-primary ">Tải
+                                                            ảnh</button>
+                                                    </div>
+                                                    <div class="col-8 col-sm-7">
+                                                        <div class="form-group">
+                                                            <label for="product-name" class="col-form-label">Tên sản
+                                                                phẩm:</label>
+                                                            <input type="text" class="form-control"
+                                                                id="product-name">
                                                         </div>
-                                                        <div class="col-8 col-sm-7">
-                                                            <div class="form-group">
-                                                                <label for="product-name" class="col-form-label">Tên sản phẩm:</label>
-                                                                <input type="text" class="form-control" id="product-name">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="product-quantity" class="col-form-label">Số lượng:</label>
-                                                                <input type="text" class="form-control" id="product-quantity">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="product-price" class="col-form-label">Giá:</label>
-                                                                <input type="text" class="form-control" id="product-price">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="product-des" class="col-form-label">Mô tả:</label>
-                                                                <textarea class="form-control" id="product-des"></textarea>
-                                                            </div>
+                                                        <div class="form-group">
+                                                            <label for="product-price"
+                                                                class="col-form-label">Giá:</label>
+                                                            <input type="text" class="form-control"
+                                                                id="product-price">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="inuse-quantity" class="col-form-label">Số
+                                                                lượng bán:</label>
+                                                            <input type="text" class="form-control"
+                                                                id="inuse-quantity">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="instock-quantity" class="col-form-label">Số
+                                                                lượng kho:</label>
+                                                            <input type="text" class="form-control"
+                                                                id="instock-quantity">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="product-des" class="col-form-label">Mô
+                                                                tả:</label>
+                                                            <textarea class="form-control"
+                                                                id="product-des"></textarea>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="product-des" class="col-form-label">Trạng
+                                                                thái</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox">
+                                                                <span class="slider round"></span>
+                                                            </label>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-primary">Thêm</button>
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
-                                    </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">Thêm</button>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-dismiss="modal">Hủy</button>
                                 </div>
                             </div>
                         </div>
+                    </div>
                     </div>
                     <!-- Page Heading -->
                     <!-- DataTales Example -->
