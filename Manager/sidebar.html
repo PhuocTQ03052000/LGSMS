@@ -22,94 +22,87 @@
 
 <body id="page-top">
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="home_staff.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">LGSMS</div>
+    </a>
 
-        <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="home_staff.html">
-            <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-laugh-wink"></i>
-            </div>
-            <div class="sidebar-brand-text mx-3">LGSMS</div>
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+        <a class="nav-link" href="charts.html">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Thống kê</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Chức năng
+    </div>
+
+    <!-- Nav Item - Admin Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAuthor" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Tài khoản</span>
         </a>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0">
-
-        <!-- Nav Item - Dashboard -->
-        <li class="nav-item active">
-            <a class="nav-link" href="charts.html">
-                <i class="fas fa-fw fa-chart-area"></i>
-                <span>Thống kê</span></a>
-        </li>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider">
-
-        <!-- Heading -->
-        <div class="sidebar-heading">
-            Chức năng
+        <div id="collapseAuthor" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="../../view_account.html">Quản lý tài khoản</a>
+            </div>
         </div>
-
-        <!-- Nav Item - Admin Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAuthor" aria-expanded="true" aria-controls="collapseTwo">
-                <i class="fas fa-fw fa-cog"></i>
-                <span>Tài khoản</span>
-            </a>
-            <div id="collapseAuthor" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="../../view_account.html">Quản lý tài khoản</a>
-                </div>
+    </li>
+    <!-- Heading -->
+    <!-- Nav Item - Manager -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseWarehouse" aria-expanded="true" aria-controls="collapse1">
+            <i class="fas fa-fw fa-boxes"></i>
+            <span>Sản phẩm</span></a>
+        </a>
+        <div id="collapseWarehouse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="product.html">Quản lý sản phẩm</a>
+                <a class="collapse-item" href="supplier.html">Quản lý nhà cung cấp</a>
             </div>
-        </li>
-        <!-- Heading -->
-        <!-- Nav Item - Manager -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseWarehouse" aria-expanded="true" aria-controls="collapse1">
-                <i class="fas fa-fw fa-boxes"></i>
-                <span>Sản phẩm</span></a>
-            </a>
-            <div id="collapseWarehouse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="product.html">Quản lý sản phẩm</a>
-                    <a class="collapse-item" href="supplier.html">Quản lý nhà cung cấp</a>
-                </div>
-            </div>
-        </li>
-        <!-- Nav Item - Business Staff Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                <i class="bi bi-calendar-check-fill"></i>
-                <span>Đơn hàng</span>
-            </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="new_order.html">Danh sách đơn hàng mới</a>
-                    <a class="collapse-item" href="accepted_order.html">Danh sách đơn chấp nhận</a>
-                    <a class="collapse-item" href="rejected_order.html">Danh sách đơn từ chối</a>
-                </div>
-            </div>
-        </li>
-        <!-- Nav Item - Business Staff Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                <i class="fas fa-fw fa-warehouse"></i>
-                <span>Kho</span>
-            </a>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="storeage.html">Danh sách hàng nhập</a>
-                    <a class="collapse-item" href="#">Danh sách phiếu thu</a>
-                </div>
-            </div>
-        </li>
-        <!-- Divider -->
-        <hr class="sidebar-divider d-none d-md-block">
-        <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
-            <button class="rounded-circle border-0" id="sidebarToggle"></button>
         </div>
-    </ul>
+    </li>
+    <!-- Nav Item - Business Staff Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="bi bi-calendar-check-fill"></i>
+            <span>Đơn hàng</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="new_order.html">Danh sách đơn hàng mới</a>
+                <a class="collapse-item" href="accepted_order.html">Danh sách đơn chấp nhận</a>
+                <a class="collapse-item" href="rejected_order.html">Danh sách đơn từ chối</a>
+            </div>
+        </div>
+    </li>
+    <!-- Nav Item - Business Staff Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+            <i class="fas fa-fw fa-warehouse"></i>
+            <span>Kho</span>
+        </a>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="storeage.html">Danh sách hàng nhập</a>
+                <a class="collapse-item" href="#">Danh sách phiếu thu</a>
+            </div>
+        </div>
+    </li>
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
