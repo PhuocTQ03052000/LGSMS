@@ -94,7 +94,11 @@
                                                     <label for="customer-name" class="col-form-label">Tên khách
                                                         hàng:</label>
                                                     <label type="text" class="border border-secondary w-100 p-2 rounded" id="customer-name">Truong Gia Viet Anh</label>
-
+                                                    <label for="order-phone" class="col-form-label">Điện thoại khách
+                                                        hàng:</label>
+                                                    <label type="text" class="border border-secondary w-100 p-2 rounded" id="order-phone">1189866124
+                                                        </label>
+                                                    </lable>
                                                     <label for="order-address" class="col-form-label">Địa chỉ khách
                                                         hàng:</label>
                                                     <label type="text" class="border border-secondary w-100 p-2 rounded" id="order-address">118
@@ -112,7 +116,7 @@
                                                         </select>
                                                         <label for="order-note" class="col-form-label">Ghi chú của nhân viên:</label>
                                                         <textarea class="border border-secondary w-100 p-2 rounded" id="order-note" style="resize: none; overflow: auto;"></textarea>
-                                                        <div style="margin-top: 3%; float: right">
+                                                        <div style="margin-top: 3%; float: right; padding-bottom:5%">
                                                             <input type="submit" class="btn btn-primary submit px-3" value="Lưu"></input>
                                                             <!-- <a href="business_new_order.html"><button type="button" class="btn btn-secondary" >Hủy</button></a> -->
                                                         </div>
@@ -122,17 +126,17 @@
                                             </div>
                                             <thead>
                                                 <tr>
-                                                    <th>Ảnh</th>
+                                                    <th>Mã sản phẩm</th>
                                                     <th>Tên sản phẩm</th>
                                                     <th>Giá bán</th>
                                                     <th>Số lượng</th>
-                                                    <th>Tổng giá sản phẩm</th>
+                                                    <th>Thành tiền</th>
 
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td><img src="../../"></td>
+                                                    <td>LG101</td>
                                                     <td>Bình gas 12kg</td>
                                                     <td>5</td>
                                                     <td>499.000</td>
@@ -140,16 +144,19 @@
 
                                                 </tr>
                                                 <tr>
-                                                    <td><img src="../../"></td>
+                                                    <td>LG102</td>
                                                     <td>Bình gas 12kg</td>
                                                     <td>6</td>
                                                     <td>499.000</td>
                                                     <td>2.994.000đ</td>
 
                                                 </tr>
-                                                <tr>
-
-                                                </tr>
+                                                <tfoot>
+                                                    <tr>
+                                                        <td colSpan="4" style="text-align: right;"><b>Tổng giá tiền:</b></td>
+                                                        <td>5.489.000đ</td>
+                                                    </tr>
+                                                </tfoot>
                                             </tbody>
                                         </table>
                                     </div>
