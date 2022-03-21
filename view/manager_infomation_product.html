@@ -72,7 +72,7 @@
                                     <!-- <div class="table-responsive"> -->
 
                                     <!-- <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0"> -->
-                                    <form id="form" action="manager_manage_product.html">
+                                    <form id="form" action="manager_manage_product.html" onsubmit="confirmFunction()">
                                         <div class="row" style="border: 2px solid lightgray;">
                                             <div class="col-8 col-sm-4" style="text-align: center ;">
                                                 <img src="../assets/image/gastank12kg_vanchuc.jpg" alt="..."
@@ -87,7 +87,7 @@
                                                     id="product-code">LG240</label>
                                                 <label for="product-name" class="col-form-label">Tên sản phẩm:</label>
                                                 <input type="text" class="form-control" id="product-name"
-                                                    value="Bình gas 12kg"></input>
+                                                    value="Bình gas 12kg" required oninvalid="this.setCustomValidity('Xin hãy tên sản phẩm.')" oninput="this.setCustomValidity('')" /></input>
                                                 <label for="provider-name" class="col-form-label">Tên thương
                                                     hiệu:</label>
                                                     <select name="provider-name" id="product-status"
@@ -95,8 +95,8 @@
                                                     <option value="status-1">Petrolimex Gas</option>
                                                 </select>
                                                 <label for="product-sell" class="col-form-label">Số lượng bán:</label>
-                                                <input type="text" class="form-control" id="product-sell"
-                                                    value="500"></input>
+                                                <input type="number" class="form-control" id="product-sell" min="1"
+                                                    value="500"  oninvalid="InvalidNum(this);" name="email" oninput="InvalidNum(this);" required="required"/></input>
                                                 <label for="product-stored" class="col-form-label">Số lượng kho:</label>
                                                 <label type="text" class="border border-secondary w-100 rounded label_box" 
                                                 readonly class="form-control-plaintext" id="product-stored"
@@ -124,8 +124,8 @@
                                             </div>
                                             <div class="col-8 col-sm-4">
                                                 <label for="product-price" class="col-form-label">Giá bán:</label>
-                                                <input type="text" class="form-control" id="product-price"
-                                                    value="499.000"></input>
+                                                <input type="number" class="form-control" id="product-price" min="1"
+                                                    value="499.000" oninvalid="InvalidPrice(this);" name="email" oninput="InvalidPrice(this);" required="required"/></input>
 
                                                 <label for="product-import" class="col-form-label">Giá nhập:</label>
                                                 <label type="text" class="border border-secondary w-100 rounded label_box" 
@@ -186,6 +186,8 @@
     <!-- Page level custom scripts -->
     <script src="../js/demo/datatables-demo.js"></script>
     <script src="../js/include-html.min.js"></script>
+    <script src="../js/confirm.js"></script>
+    <script src="../js/staff_validate.js"></script>
 </body>
 
 </html>
