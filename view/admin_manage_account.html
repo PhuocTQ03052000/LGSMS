@@ -90,7 +90,7 @@
                                                                 </select>
                                                             </div>
                                                             <div class="modal-footer">
-                                                                <input type="submit" class="btn btn-primary" value="Thêm"></button>
+                                                                <input type="submit" class="btn btn-primary" onclick="confirmFunction()" value="Thêm"></button>
                                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
                                                             </div>
                                                         </div>
@@ -184,16 +184,16 @@
                         <div class="form-group">
                             <label>Vai trò</label>
                             <select class="form-control" name="roles" id="roles">
-                            <option value="volvo">Admin</option>
-                            <option value="saab">Manager</option>
-                            <option value="opel">Business Staff</option>
-                            <option value="audi">Customer</option>
+                            <option value="admin">Admin</option>
+                            <option value="manager">Manager</option>
+                            <option value="business">Business Staff</option>
+                            <option value="customer">Customer</option>
                         </select>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                        <input type="submit" class="btn btn-info" value="Lưu">
+                        <input type="submit" class="btn btn-info" onclick="confirmFunction()" value="Lưu">
                     </div>
                 </form>
             </div>
@@ -203,8 +203,7 @@
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
 
     <!-- Custom scripts for all pages-->
     <script src="../js/sb-admin-2.min.js"></script>
@@ -216,6 +215,7 @@
     <!-- Page level custom scripts -->
     <script src="../js/demo/datatables-demo.js"></script>
     <script src="../js/include-html.min.js"></script>
+    <script src="../js/confirm.js"></script>
 </body>
 
 </html>
