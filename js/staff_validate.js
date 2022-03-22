@@ -40,8 +40,9 @@ function InvalidPrice(textbox) {
     return true;
 }
 
-const phone = document.getElementById('staff-phone', 'provider-phone');
-    const re = /(84|0[3|5|7|8|9])+([0-9]{8})\b/g;
+const phone = document.getElementById('staff-phone');
+const phone1 = document.getElementById('provider-phone');
+const re = /(84|0[3|5|7|8|9])+([0-9]{8})\b/g;
 
 //Điều kiện số điện thoại
 const isValidPhone = phone => {
@@ -51,6 +52,17 @@ const isValidPhone = phone => {
 //Trim input và các thông báo
 function InvalidPhone(textbox) {
     const phoneValue = phone.value.trim();
+    // Thông báo nhập số điện thoại
+    if (phoneValue === '') {
+        textbox.setCustomValidity('Xin hãy nhập số điện thoại.');
+    } else if (!isValidPhone(phoneValue)) {
+        textbox.setCustomValidity('Xin hãy nhập đúng số điện thoại.');
+    } else {
+        textbox.setCustomValidity('');
+    }
+}
+function InvalidPhone(textbox) {
+    const phoneValue = phone1.value.trim();
     // Thông báo nhập số điện thoại
     if (phoneValue === '') {
         textbox.setCustomValidity('Xin hãy nhập số điện thoại.');
