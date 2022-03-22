@@ -67,7 +67,7 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Phiếu thu</h6>
                                 </div>
                                 <div class="card-body">
-                                    <div class="table-responsive">
+                                    <!-- <div class="table-responsive"> -->
 
                                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                             <div class="row" style="border: 2px solid lightgray;">
@@ -102,7 +102,7 @@
                                                     <label type="text" class="border border-secondary w-100 p-2 rounded" id="order-address">118
                                                         Hồ Tây, Hoàn Kiếm, Hà Nội</label>
                                                     </lable>
-                                                    <form id="form" action="business_new_order.html">
+                                                    <form id="form" action="business_new_order.html" onsubmit="confirmFunction()">
                                                         <label for="order-status" class="col-form-label">Trạng
                                                             thái:</label><br>
                                                         <select name="order-status" id="order-status" class="border border-secondary w-100 p-2 rounded" style="margin-bottom: 8px;">
@@ -158,7 +158,7 @@
                                                     <td>5.489.000đ</td>
                                                 </tr>
                                                 <tr>
-                                                    <td colSpan="4" style="text-align: right;"><b>Tiền cọc:</b></td>
+                                                    <td colSpan="4" style="text-align: right;"><b>Tiền cọc vỏ bình:</b></td>
                                                     <td>1.100.000đ</td>
                                                 </tr>
                                                 <tr>
@@ -167,7 +167,7 @@
                                                 </tr>
                                             </tfoot>
                                         </table>
-                                    </div>
+                                    <!-- </div>           -->
                                 </div>
                             </div>
                         </div>
