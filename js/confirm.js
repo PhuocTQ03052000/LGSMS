@@ -4,3 +4,9 @@ function confirmFunction() {
         location.reload();
     }
 }
+function confirmChangePass() {
+    if (confirm("Bạn có chắc chắn với việc thay đổi mật khẩu này?") == true) {
+        alert("Lưu thành công!");
+        location.reload();
+    }
+}
