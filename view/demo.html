@@ -5,10 +5,13 @@
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="" rel="stylesheet">
+    <link href="" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/css/productdetail.css" rel="stylesheet">
+    <!-- <link href="/assets/styles/bootstrap.min.css" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -16,36 +19,123 @@
         <div include-html="/components/header.html" id="header" style="display: contents;"></div>
     </header>
     <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <h3 class="text-title text-uppercase">Bình gas petrolimex 12kg van ngang</h3>
-                <div class="row">
-                    <div class="col-lg-5 col-md-5 col-sm-6">
-                        <div class="white-box text-center"><img src="/assets/image/gastank12kg_vanngang.jpg" class="img-responsive"></div>
-                    </div>
-                    <div class="col-lg-7 col-md-7 col-sm-6">
-                        <h4 class="box-title mt-5">Bình gas petrolimex 12kg van ngang</h4>
-                        <ul class="list-info">
-                            <li>Giá bán: 499.000 VNĐ</li>
-                            <li style="color: #ff1313;">Giá khuyến mại: </li>
-                            <li>Thương hiệu: Gas Petrolimex</li>
-                            <li>Tình trạng: Còn hàng</li>
-                            <li>Bảo hành: Có sổ bảo hiểm bình gas</li>
-                        </ul>
-                        <button class="btn btn-dark btn-rounded mr-1" data-toggle="tooltip" title="" data-original-title="Add to cart">
-                                <i class="fa fa-shopping-cart"> Thêm vào giỏ hàng</i>
-                            </button>
-                        <button class="btn btn-primary btn-rounded">Mua ngay</button>
-                    </div>
-                    <h3 class="box-title mt-5" style="border-top:1px solid rgb(194, 180, 180)">Mô tả sản phẩm</h3>
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div class="table-responsive">
-                            <div include-html="/assets/view_product_des/gas12kgvanngang.html" id="product_description" style="display:contents"></div>
+        <section class="pt-5 pb-5">
+            <div class="container">
+                <div class="row w-100">
+                    <div class="col-lg-12 col-md-12 col-12">
+                        <h3 class="display-5 mb-2 text-left">Shopping Cart</h3>
+                        <p class="ml-2 text-left">
+                            <i class="text-info font-weight-bold">3</i> items in your cart</p>
+                        <table id="shoppingCart" class="table table-condensed table-responsive">
+                            <thead>
+                                <tr>
+                                    <th style="width:60%">Product</th>
+                                    <th style="width:12%">Price</th>
+                                    <th style="width:5%">Quantity</th>
+                                    <th style="width:16%"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-th="Product">
+                                        <div class="row">
+                                            <div class="col-md-3 text-left">
+                                                <img src="https://via.placeholder.com/250x250/5fa9f8/ffffff" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
+                                            </div>
+                                            <div class="col-md-9 text-left mt-sm-2">
+                                                <h4>Product Name</h4>
+                                                <p class="font-weight-light">Brand &amp; Name</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td data-th="Price">$49.00</td>
+                                    <td data-th="Quantity">
+                                        <input type="number" class="form-control form-control-lg text-center" value="1">
+                                    </td>
+                                    <td class="actions" data-th="">
+                                        <div class="text-right">
+                                            <button class="btn btn-white border-secondary bg-white btn-md mb-2">
+                                    <i class="fas fa-sync"></i>
+                                </button>
+                                            <button class="btn btn-white border-secondary bg-white btn-md mb-2">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Product">
+                                        <div class="row">
+                                            <div class="col-md-3 text-left">
+                                                <img src="https://via.placeholder.com/250x250/5fa9f8/ffffff" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
+                                            </div>
+                                            <div class="col-md-9 text-left mt-sm-2">
+                                                <h4>Product Name</h4>
+                                                <p class="font-weight-light">Brand &amp; Name</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td data-th="Price">$49.00</td>
+                                    <td data-th="Quantity">
+                                        <input type="number" class="form-control form-control-lg text-center" value="1">
+                                    </td>
+                                    <td class="actions" data-th="">
+                                        <div class="text-right">
+                                            <button class="btn btn-white border-secondary bg-white btn-md mb-2">
+                                    <i class="fas fa-sync"></i>
+                                </button>
+                                            <button class="btn btn-white border-secondary bg-white btn-md mb-2">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Product">
+                                        <div class="row">
+                                            <div class="col-md-3 text-left">
+                                                <img src="https://via.placeholder.com/250x250/5fa9f8/ffffff" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
+                                            </div>
+                                            <div class="col-md-9 text-left mt-sm-2">
+                                                <h4>Product Name</h4>
+                                                <p class="font-weight-light">Brand &amp; Name</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td data-th="Price">$49.00</td>
+                                    <td data-th="Quantity">
+                                        <input type="number" class="form-control form-control-lg text-center" value="1">
+                                    </td>
+                                    <td class="actions" data-th="">
+                                        <div class="text-right">
+                                            <button class="btn btn-white border-secondary bg-white btn-md mb-2">
+                                    <i class="fas fa-sync"></i>
+                                </button>
+                                            <button class="btn btn-white border-secondary bg-white btn-md mb-2">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="float-right text-right">
+                            <h4>Subtotal:</h4>
+                            <h1>$99.00</h1>
                         </div>
                     </div>
                 </div>
+                <div class="row mt-4 d-flex align-items-center">
+                    <div class="col-sm-6 order-md-2 text-right">
+                        <a href="catalog.html" class="btn btn-primary mb-4 btn-lg pl-5 pr-5">Checkout</a>
+                    </div>
+                    <div class="col-sm-6 mb-3 mb-m-1 order-md-1 text-md-left">
+                        <a href="catalog.html">
+                            <i class="fas fa-arrow-left mr-2"></i> Continue Shopping</a>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
     </div>
     <footer>
         <div include-html="/components/footer.html" id="footer" style="display: contents;"></div>
