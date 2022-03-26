@@ -40,23 +40,14 @@
 }
 
 .bg-cart {
-    background-color: orange !important;
-    color: #fff;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(211, 206, 206);
+    border-radius: 25px;
 }
 
 .bg-cart:hover {
-    color: #fff;
-    background-color: orange !important;
-}
-
-.bg-buy {
-    background-color: green;
-    color: #fff;
-    padding-right: 29px;
-}
-
-.bg-buy:hover {
-    color: #fff;
+    background-color: orange;
+    color: white;
 }
 
 a {
@@ -154,7 +145,6 @@ a {
 
 .d-flex a {
     text-decoration: none;
-    color: white;
 }
 
 .d-md-flex {
