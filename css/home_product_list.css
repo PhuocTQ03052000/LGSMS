@@ -40,12 +40,13 @@
 }
 
 .bg-cart {
-    background-color: orange;
+    background-color: orange !important;
     color: #fff;
 }
 
 .bg-cart:hover {
     color: #fff;
+    background-color: orange !important;
 }
 
 .bg-buy {
