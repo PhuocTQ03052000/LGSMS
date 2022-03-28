@@ -20,7 +20,7 @@
     <link href="../css/view_list_account.css" rel="stylesheet">
     <!-- Custom styles for this page -->
     <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-
+    <link href="../css/fnon.min.css" rel="stylesheet">
 </head>
 
 
@@ -104,7 +104,7 @@
                                                 <label type="text" class="border border-secondary w-100 p-2 rounded" id="order-address">118
                                                         Hồ Tây, Hoàn Kiếm, Hà Nội</label>
                                                 </lable>
-                                                <form id="form" action="business_new_order.html" onsubmit="confirmFunction()">
+                                                <form id="form" action="business_new_order.html" >
                                                     <label for="order-status" class="col-form-label">Trạng
                                                             thái:</label><br>
                                                     <select name="order-status" id="order-status" class="border border-secondary w-100 p-2 rounded" style="margin-bottom: 8px;">
@@ -117,7 +117,7 @@
                                                     <label for="order-note" class="col-form-label">Ghi chú của nhân viên:</label>
                                                     <textarea class="border border-secondary w-100 p-2 rounded" id="order-note" style="resize: none; overflow: auto;"></textarea>
                                                     <div style="margin-top: 3%; float: right; padding:2%">
-                                                        <input type="submit" class="btn btn-primary submit px-3" value="Lưu"></input>
+                                                        <input type="button" class="btn btn-primary submit px-3" value="Lưu" onclick="confirmFunction()"></input>
 
                                                     </div>
                                                 </form>
@@ -208,6 +208,7 @@
     <script src="../js/demo/datatables-demo.js"></script>
     <script src="../js/include-html.min.js"></script>
     <script src="../js/confirm.js"></script>
+    <script src="../js/fnon.min.js"></script>
 </body>
 
 </html>
