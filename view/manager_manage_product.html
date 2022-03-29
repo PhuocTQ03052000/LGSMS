@@ -18,9 +18,10 @@
     <!-- Custom styles for this template -->
     <link href="../assets/styles/sb-admin-2.min.css" rel="stylesheet">
     <link href="../assets/styles/slider_status.css" rel="stylesheet">
-
+    <link href="../assets/styles/custom_box.css" rel="stylesheet">
     <!-- Custom styles for this page -->
     <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="../css/fnon.min.css" rel="stylesheet">
 
 </head>
 
@@ -68,7 +69,7 @@
                                     </div>
                                     <!-- Add new product -->
                                     <div class="modal-body">
-                                        <form action="" id="form" onsubmit="confirmFunction()">
+                                        <form action="" id="form">
                                             <div class="row" style="width: 100%;">
                                                 <div class="col-sm-12">
                                                     <div class="row">
@@ -79,15 +80,27 @@
                                                         <div class="col-8 col-sm-7">
                                                             <div class="form-group">
                                                                 <label for="product-name" class="col-form-label">Tên sản phẩm:</label>
-                                                                <input type="text" class="form-control" id="product-name" required oninvalid="this.setCustomValidity('Xin hãy tên sản phẩm.')" oninput="this.setCustomValidity('')" /></input>
+                                                                <input type="text" class="form-control" id="product-name"/></input>
+                                                                <p class="fail"></p>
                                                             </div>
                                                             <div class="form-group">
+                                                                <label for="product-provider">Tên thương hiệu:</label>
+                                                                <select name="product-provider" id="product-provider"
+                                                                    class="border border-secondary w-100 label_box rounded">
+                                                                    <option value="provỉder-1">Petrolimex Gas
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                            <br>
+                                                            <div class="form-group">
                                                                 <label for="product-quantity" class="col-form-label">Số lượng:</label>
-                                                                <input type="text" class="form-control" id="product-quantity" oninvalid="InvalidNum(this);" oninput="InvalidNum(this);" required="required" /></input>
+                                                                <input type="text" class="form-control" id="product-quantity" /></input>
+                                                                <p class="fail"></p>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="product-price" class="col-form-label">Giá bán:</label>
-                                                                <input type="text" class="form-control" id="product-price" required oninvalid="this.setCustomValidity('Xin hãy tên sản phẩm.')" oninput="this.setCustomValidity('')" /></input>
+                                                                <input type="text" class="form-control" id="product-price"/></input>
+                                                                <p class="fail"></p>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="product-des" class="col-form-label">Mô tả:</label>
@@ -182,8 +195,8 @@
     <!-- Page level custom scripts -->
     <script src="../js/demo/datatables-demo.js"></script>
     <script src="../js/include-html.min.js"></script>
-    <script src="../js/confirm.js"></script>
-    <script src="../js/staff_validate.js"></script>
+    <script src="../js/valdation/product_validate.js"></script>
+    <script src="../js/fnon.min.js"></script>
 </body>
 
 </html>
