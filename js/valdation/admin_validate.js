@@ -11,7 +11,6 @@ const username = document.getElementById('username');
 const pass = document.getElementById('staff-password');
 
 const form1 = document.getElementById('form1');
-console.log(form1)
 const aname1 = document.getElementById('staff-name1');
 const email1 = document.getElementById('staff-email1');
 const phone1 = document.getElementById('staff-phone1');
