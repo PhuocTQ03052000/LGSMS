@@ -6,136 +6,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Order_List</title>
-    <link src="/css/customer_order_detail.css" rel="stylesheet" type="text/css">
+    <title>Order_Detail</title>
+    <link href="/css/customer_order_detail.css" rel="stylesheet" type="text/css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 
 </head>
 
 <body>
-
     <header>
         <div include-html="/components/header.html" id="header" style="display: contents;"></div>
     </header>
-    <div class="container-fluid">
-        <!-- Page Heading -->
-        <div class="d-sm-flex align-items-center justify-content-between mb-2">
-            <h3 class="text-gray-800">Chi tiết đơn hàng</h3>
-        </div>
+    <div class="container-fluid mt-4">
         <!-- DataTales Example -->
-        <div class="row" style="width: 100%;">
+        <div class="row">
             <div class="col-8 col-sm-12">
-                <div class="card shadow mb-4">
+                <div class="card mb-4">
                     <div class="card-header py-3">
-                        <a class=" font-weight-bold text-primary" href="#">Trở lại</a>
+                        <h5 class="text-gray-800">Thông tin đơn hàng
+                            <label type="text" class="float-right" id="order-code">Mã đơn
+                            hàng: LG240 <span> | </span>Đang xử lí
+                        </label>
+                        </h5>
                     </div>
                     <div class="card-body">
-                        <div class="row" style="padding-bottom: 10px;">
-                            <div class="col-8 col-sm-1"></div>
-                            <div class="col-8 col-sm-5">
-                                <label for="order-code" class="col-form-label">Mã đơn
-                                            hàng:</label>
-                                <label type="text" class="border border-secondary w-100 p-2 rounded" id="order-code">LG240</label>
-                                <label for="order-price" class="col-form-label">Tổng giá
-                                            tiền:</label>
-                                <label type="text" class="border border-secondary w-100 p-2 rounded" id="order-price">5.489.000đ</label>
-                                <label for="staff-order" class="col-form-label">Nhân viên nhận
-                                            đơn:</label>
-                                <label type="text" class="border border-secondary w-100 p-2 rounded" id="staff-order">Truong
-                                            Quang Phuoc</label>
-                                <label for="order-date" class="col-form-label">Ngày nhận
-                                            đơn:</label>
-                                <label type="text" class="border border-secondary w-100 p-2 rounded" id="order-date">10/03/2022</label>
-                                <label for="cus-note" class="col-form-label">Ghi chú của khách hàng:</label>
-                                <textarea class="border border-secondary w-100 p-2 rounded" readonly class="form-control-plaintext" id="order-note" style="resize: none; overflow: auto;"></textarea>
+                        <div class="row">
+                            <div class="col-8 col-sm-5 ml-3 border-right">
+
+                                <label type="text" class="border-bottom w-100 p-2 rounded" id="customer-name">Họ tên: Truong Gia Viet Anh</label>
+                                <label type="text" class="border-bottom w-100 p-2 rounded" id="order-phone">Điện thoại: 1189866124</label>
+                                <label type="text" class="border-bottom w-100 p-2 rounded" id="order-address">Địa chỉ: 118
+                                    Hồ Tây, Hoàn Kiếm, Hà Nội</label>
+                                <label type="text" class="border-bottom w-100 p-2 rounded" id="order-note">Ghi chú:</label>
+                            </div>
+                            <div class="col-8 col-sm-5 ml-3">
+                                <!-- <ul class="timeline">
+                                    <li>
+                                        <span>24/03/2022</span>
+                                        <span>Hoàn thành đơn hàng</span>
+                                    </li>
+                                    <li>
+                                        <span>23/03/2022</span>
+                                        <span>Giao hàng thành công</span>
+                                    </li>
+                                    <li>
+                                        <span>22/03/2022</span>
+                                        <span>Đơn hàng đang vận chuyển</span>
+
+                                    </li>
+                                    <li>
+                                        <span>20/03/2022</span>
+                                        <span>Đơn hàng đang được chuẩn bị</span>
+
+                                    </li>
+                                    <li>
+                                        <span>19/03/2022</span>
+                                        <span>Đơn hàng đã được xác nhận</span>
+
+                                    </li> -->
 
                             </div>
-                            <div class="col-8 col-sm-5">
-                                <label for="customer-name" class="col-form-label">Tên khách
-                                            hàng:</label>
-                                <label type="text" class="border border-secondary w-100 p-2 rounded" id="customer-name">Truong Gia Viet Anh</label>
-                                <label for="order-phone" class="col-form-label">Điện thoại khách
-                                            hàng:</label>
-                                <label type="text" class="border border-secondary w-100 p-2 rounded" id="order-phone">1189866124
-                                            </label>
-                                </lable>
-                                <label for="order-address" class="col-form-label">Địa chỉ khách
-                                            hàng:</label>
-                                <label type="text" class="border border-secondary w-100 p-2 rounded" id="order-address">118
-                                            Hồ Tây, Hoàn Kiếm, Hà Nội</label>
-                                </lable>
-                                <form id="form" action="business_new_order.html">
-                                    <label for="order-status" class="col-form-label">Trạng
-                                                thái:</label><br>
-                                    <select name="order-status" id="order-status" class="border border-secondary w-100 p-2 rounded" style="margin-bottom: 8px;">
-                                                <option value="status-1">Đang xử lí</option>
-                                                <option value="status-2">Đã nhận đơn</option>
-                                                <option value="status-3">Đơn bị hủy</option>
-                                                <option value="status-4">Đang vận chuyển</option>
-                                                <option value="status-5">Hoàn thành</option>
-                                            </select>
-                                    <label for="order-note" class="col-form-label">Ghi chú của nhân viên:</label>
-                                    <textarea class="border border-secondary w-100 p-2 rounded" id="order-note" style="resize: none; overflow: auto;"></textarea>
-                                    <div style="margin-top: 3%; float: right; padding:2%">
-                                        <input type="button" class="btn btn-primary submit px-3" value="Lưu" onclick="confirmFunction()"></input>
 
-                                    </div>
-                                </form>
+                            <div class="table-responsive mt-4">
+
+                                <table class="table table-bordered" id="dataTable" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th width="8%"></th>
+                                            <th width="10%">Mã sản phẩm</th>
+                                            <th width="20%">Tên sản phẩm</th>
+                                            <th width="20%">Thương hiệu</th>
+                                            <th width="8%">Số lượng</th>
+                                            <th width="10%">Giá bán</th>
+                                            <th width="10%">Thành tiền</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><img src="/assets/image/gastank12kg_vanngang.jpg" width="70" height="70">
+                                            </td>
+                                            <td>LG101</td>
+                                            <td>Bình gas 12kg</td>
+                                            <td>Petrolimex Gas</td>
+                                            <td>5</td>
+                                            <td>499.000</td>
+                                            <td>2.495.000đ</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="/assets/image/gastank12kg_vanngang.jpg" width="70" height="70"></td>
+                                            <td>LG102</td>
+                                            <td>Bình gas 12kg</td>
+                                            <td>Petrolimex Gas</td>
+                                            <td>6</td>
+                                            <td>499.000</td>
+                                            <td>2.994.000đ</td>
+
+                                        </tr>
+                                        <tfoot>
+                                            <tr>
+                                                <td colSpan="6" style="text-align: right;">Tổng tiền hàng</td>
+                                                <td>5.489.000đ</td>
+                                            </tr>
+                                            <tr>
+                                                <td colSpan="6" style="text-align: right;">Phí vận chuyển</td>
+                                                <td>0đ</td>
+                                            </tr>
+                                            <tr>
+                                                <td colSpan="6" style="text-align: right;">Tiền cọc bình</td>
+                                                <td>1.100.000đ</td>
+                                            </tr>
+                                            <tr>
+                                                <td colSpan="6" style="text-align: right;">Tổng số tiền</td>
+                                                <td>6.100.000đ</td>
+                                            </tr>
+                                        </tfoot>
+                                    </tbody>
+                                </table>
                             </div>
+                            <a href="#"> <i class="fa fa-chevron-left"></i> Trở lại</a>
                         </div>
-                        <table class="table table-bordered" id="dataTable" width="100%">
-                            <thead>
-                                <tr>
-                                    <th>Mã sản phẩm</th>
-                                    <th>Tên sản phẩm</th>
-                                    <th>Giá bán</th>
-                                    <th>Số lượng</th>
-                                    <th>Thành tiền</th>
-
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>LG101</td>
-                                    <td>Bình gas 12kg</td>
-                                    <td>5</td>
-                                    <td>499.000</td>
-                                    <td>2.495.000đ</td>
-
-                                </tr>
-                                <tr>
-                                    <td>LG102</td>
-                                    <td>Bình gas 12kg</td>
-                                    <td>6</td>
-                                    <td>499.000</td>
-                                    <td>2.994.000đ</td>
-
-                                </tr>
-                                <tfoot>
-                                    <tr>
-                                        <td colSpan="4" style="text-align: right;"><b>Tổng thành tiền:</b></td>
-                                        <td>5.489.000đ</td>
-                                    </tr>
-                                </tfoot>
-                            </tbody>
-                        </table>
-                        <!-- </div> -->
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
     <footer>
         <div include-html="/components/footer.html" id="footer" style="display: contents;"></div>
     </footer>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/js/include-html.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </body>
 
 </html>
