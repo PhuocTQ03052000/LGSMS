@@ -1,30 +1,19 @@
 // Lấy input
 let x = 0;
+let y = 0;
 const form = document.getElementById('form');
-const pname = document.getElementById('provider-name');
-const email = document.getElementById('provider-email');
-const phone = document.getElementById('provider-phone');
-const address = document.getElementById('provider-address');
-//Điều kiện email
-const isValidEmail = email => {
-        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
-    }
-    //Điều kiện số điện thoại
-const isValidPhone = phone => {
-        const re = /(84|0[3|5|7|8|9])+([0-9]{8})\b/g;
-        return re.test(String(phone).toLowerCase());
-    }
-    //Xét điều kiện để hiện thông báo lỗi
+const price = document.getElementById('product-price');
+const quantity = document.getElementById('product-quantity');
+
+//Xét điều kiện để hiện thông báo lỗi form add
 const setError = (element, message) => {
-        const inputControl = element.parentElement;
-        const errorDisplay = inputControl.querySelector('.fail');
-        errorDisplay.innerText = message;
-        inputControl.classList.add('failed');
-        inputControl.classList.remove('success')
-        x = 0;
-    }
-    //Xét điều kiện để hiện thông báo thành công
+    const inputControl = element.parentNode;
+    const errorDisplay = inputControl.querySelector('.fail');
+    errorDisplay.innerText = message;
+    inputControl.classList.add('failed');
+    inputControl.classList.remove('success')
+}
+//Xét điều kiện để hiện thông báo thành công form add
 const setSuccess = element => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.fail');
@@ -32,18 +21,18 @@ const setSuccess = element => {
     inputControl.classList.add('success');
     inputControl.classList.remove('failed');
     x = x + 1;
-
 };
-//Chạy hàm validate
+
+//Chạy hàm validate form add
 form.addEventListener('submit', e => {
     e.preventDefault();
     x = 0;
     validateInputs();
-    if (x == 4) {
+    if (x == 2) {
         Fnon.Ask.Danger({
             width: 'nl', // sm//lg//nl//xl
             // closeButton: true,
-            animation: 'slide-top', //'fade', 'slide-top', 'slide-bottom', 'slide-right' and 'slide-left'
+            animation: 'slide-top',//'fade', 'slide-top', 'slide-bottom', 'slide-right' and 'slide-left'
             closeButton: false,
             // callback: undefined,
             // icon: undefined,
@@ -103,38 +92,28 @@ form.addEventListener('submit', e => {
     }
 });
 
-//Trim input và các thông báo
+
+//Trim input và các thông báo form add
 const validateInputs = () => {
-    const phoneValue = phone.value.trim();
-    const emailValue = email.value.trim();
-    const nameValue = pname.value.trim();
-    const addressValue = address.value.trim();
-    // Thông báo nhập số điện thoại
-    if (phoneValue === '') {
-        setError(phone, 'Yêu cầu nhập số điện thoại');
-    } else if (!isValidPhone(phoneValue)) {
-        setError(phone, 'Nhập đúng định dạng số điện thoại');
-    } else {
-        setSuccess(phone);
-    }
-    //Thông báo nhập địa chỉ email
-    if (emailValue === '') {
-        setError(email, 'Yêu cầu nhập địa chỉ email');
-    } else if (!isValidEmail(emailValue)) {
-        setError(email, 'Nhập đúng định dạng email');
-    } else {
-        setSuccess(email);
-    }
+    const quantityValue = quantity.value.trim();
+    const priceValue = price.value.trim();
+    
     //Thông báo nhập địa chỉ
-    if (addressValue === '') {
-        setError(address, 'Yêu cầu nhập địa chỉ nhà cung cấp');
-    } else {
-        setSuccess(address);
+    if (quantityValue === '') {
+        setError(quantity, 'Yêu cầu nhập số lượng sản phẩm');
+    } else if (quantityValue < 1) {
+        setError(quantity, 'Yêu cầu nhập đúng số lượng sản phẩm');
+    }
+     else {
+        setSuccess(quantity);
     }
     //Thông báo tên nhà cung cấp
-    if (nameValue === '') {
-        setError(pname, 'Yêu cần nhập tên nhà cung cấp');
+    if (priceValue === '') {
+        setError(price, 'Yêu cần nhập giá sản phẩm');
+    }else if (priceValue < 1) {
+        setError(price, 'Yêu cầu nhập đúng giá sản phẩm'); 
     } else {
-        setSuccess(pname);
+        setSuccess(price);
     }
 };
+

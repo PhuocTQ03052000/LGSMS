@@ -20,6 +20,7 @@
     <link href="../css/view_list_account.css" rel="stylesheet">
     <!-- Custom styles for this page -->
     <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="../css/fnon.min.css" rel="stylesheet">
 
 </head>
 
@@ -100,7 +101,7 @@
                                             <label type="text" class="border border-secondary w-100 p-2 rounded" id="order-address">118
                                                         Hồ Tây, Hoàn Kiếm, Hà Nội</label>
                                             </lable>
-                                            <form id="form" action="business_new_order.html" onsubmit="confirmFunction()">
+                                            <form id="form" action="business_new_order.html">
                                                 <label for="order-status" class="col-form-label">Trạng
                                                             thái:</label><br>
                                                 <select name="order-status" id="order-status" class="border border-secondary w-100 p-2 rounded" style="margin-bottom: 8px;">
@@ -112,68 +113,71 @@
                                                         </select>
                                                 <label for="order-note" class="col-form-label">Ghi chú của nhân viên:</label>
                                                 <textarea class="border border-secondary w-100 p-2 rounded" id="order-note" style="resize: none; overflow: auto;"></textarea>
-                                                <div style=" float: right ; padding-left:70%">
-                                                    <input type="submit" class="btn btn-primary submit px-3" value="Lưu"></input>
+                                                <div style="margin-top: 2%; float: right ; padding:2%">
+                                                    <input type="button" class="btn btn-primary submit px-3" value="Lưu" onclick="confirmFunction()"></input>
                                                     <!-- <a href="business_new_order.html"><button type="button" class="btn btn-secondary" >Hủy</button></a> -->
                                                 </div>
                                             </form>
 
                                         </div>
+                                        </form>
+
                                     </div>
-                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                        <thead>
-                                            <tr>
-                                                <th>Mã sản phẩm</th>
-                                                <th>Tên sản phẩm</th>
-                                                <th>Giá bán</th>
-                                                <th>Số lượng</th>
-                                                <th>Thành tiền</th>
-
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>LG101</td>
-                                                <td>Bình gas 12kg</td>
-                                                <td>499.000</td>
-                                                <td>5</td>
-                                                <td>2.495.000đ</td>
-
-                                            </tr>
-                                            <tr>
-                                                <td>LG102</td>
-                                                <td>Bình gas 12kg</td>
-                                                <td>499.000</td>
-                                                <td>6</td>
-                                                <td>2.994.000đ</td>
-
-                                            </tr>
-                                            <tr>
-                                            </tr>
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <td colSpan="4" style="text-align: right;"><b>Tổng tiền sản phẩm:</b></td>
-                                                <td>5.489.000đ</td>
-                                            </tr>
-                                            <tr>
-                                                <td colSpan="4" style="text-align: right;"><b>Tiền cọc vỏ bình:</b></td>
-                                                <td>1.100.000đ</td>
-                                            </tr>
-                                            <tr>
-                                                <td colSpan="4" style="text-align: right;"><b>Tổng tiền khách phải trả:</b></td>
-                                                <td>6.589.000đ</td>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                    <!-- </div>           -->
                                 </div>
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Mã sản phẩm</th>
+                                            <th>Tên sản phẩm</th>
+                                            <th>Giá bán</th>
+                                            <th>Số lượng</th>
+                                            <th>Thành tiền</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>LG101</td>
+                                            <td>Bình gas 12kg</td>
+                                            <td>499.000</td>
+                                            <td>5</td>
+                                            <td>2.495.000đ</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>LG102</td>
+                                            <td>Bình gas 12kg</td>
+                                            <td>499.000</td>
+                                            <td>6</td>
+                                            <td>2.994.000đ</td>
+
+                                        </tr>
+                                        <tr>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colSpan="4" style="text-align: right;"><b>Tổng tiền sản phẩm:</b></td>
+                                            <td>5.489.000đ</td>
+                                        </tr>
+                                        <tr>
+                                            <td colSpan="4" style="text-align: right;"><b>Tiền cọc vỏ bình:</b></td>
+                                            <td>1.100.000đ</td>
+                                        </tr>
+                                        <tr>
+                                            <td colSpan="4" style="text-align: right;"><b>Tổng tiền khách phải trả:</b></td>
+                                            <td>6.589.000đ</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                                <!-- </div>           -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- End of Content Wrapper -->
 
@@ -202,7 +206,8 @@
     <!-- Page level custom scripts -->
     <script src="../js/demo/datatables-demo.js"></script>
     <script src="../js/include-html.min.js"></script>
-    <script src="../js/confirm.js"></script>
+    <script src="../js/valdation/confirm.js"></script>
+    <script src="../js/fnon.min.js"></script>
 </body>
 
 </html>

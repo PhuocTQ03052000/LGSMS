@@ -21,6 +21,7 @@
     <!-- Custom styles for this page -->
     <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="../assets/styles/custom_box.css" rel="stylesheet">
+    <link href="../css/fnon.min.css" rel="stylesheet">
 
 </head>
 
@@ -67,10 +68,10 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <form id="form" action="" onsubmit="confirmFunction()">
+                                        <form id="form" action="">
                                             <div class="col-8 col-sm-12" style="text-align: center ;">
                                                 <img src="../assets/image/avatar.jpg" alt="..." class="img-thumbnail" style="height: 200px; width: 200px; border-radius: 50%;">
-                                                <div><input type="file" id="user_avatar" accept="image/png, image/jpeg">
+                                                <div><input type="file" id="staff_avatar" accept="image/png, image/jpeg">
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -78,25 +79,28 @@
                                                     <div class="row">
                                                         <div class="col-8 col-sm-6">
                                                             <div class="form-group">
-                                                                <label for="user-name" class="col-form-label">Họ và
+                                                                <label for="staff-name" class="col-form-label">Họ và
                                                                     tên:</label>
-                                                                <input type="text" class="form-control" id="user-name" required oninvalid="this.setCustomValidity('Xin hãy nhập tên nhân viên.')" oninput="this.setCustomValidity('')" />
+                                                                <input type="text" class="form-control" id="staff-name"/>
+                                                                <div class="fail"></div>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="staff-phone" class="col-form-label">Số điện
                                                                     thoại:</label>
-                                                                <input type="text" class="form-control" id="staff-phone" oninvalid="InvalidPhone(this);" name="phone" oninput="InvalidPhone(this);" required="required" />
+                                                                <input type="text" class="form-control" id="staff-phone"/>
+                                                                <div class="fail"></div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="user-address" class="col-form-label">Họ và
-                                                                    tên:</label>
-                                                                <input type="text" class="form-control" id="user-address" required oninvalid="this.setCustomValidity('Xin hãy nhập địa chỉ nhân viên.')" oninput="this.setCustomValidity('')" />
+                                                                <label for="staff-address" class="col-form-label">Địa chỉ:</label>
+                                                                <input type="text" class="form-control" id="staff-address"/>
+                                                                <div class="fail"></div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col">
                                                                     <div class="form-group">
-                                                                        <label for="user-dob" class="col-form-label">Ngày sinh</label>
-                                                                        <input class="form-control" id="user-dob" name="date" placeholder="MM/DD/YYYY" type="date" required oninvalid="this.setCustomValidity('Xin hãy nhập ngày sinh của nhân viên.')" oninput="this.setCustomValidity('')" />
+                                                                        <label for="staff-dob" class="col-form-label">Ngày sinh</label>
+                                                                        <input class="form-control" id="staff-dob" name="date" placeholder="MM/DD/YYYY" type="date"/>
+                                                                        <div class="fail"></div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col">
@@ -112,15 +116,18 @@
                                                             <div class="form-group">
                                                                 <label for="username" class="col-form-label">Tên đăng
                                                                     nhập:</label>
-                                                                <input type="text" class="form-control" id="username" required oninvalid="this.setCustomValidity('Xin hãy nhập tên tài khoản của bạn.')" oninput="this.setCustomValidity('')" />
+                                                                <input type="text" class="form-control" id="username"/>
+                                                                <div class="fail"></div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="user-password" class="col-form-label">Mật khẩu:</label>
-                                                                <input type="text" class="form-control" id="user-password" required oninvalid="this.setCustomValidity('Xin hãy nhập mật khẩu cho nhân viên.')" oninput="this.setCustomValidity('')" />
+                                                                <label for="staff-password" class="col-form-label">Mật khẩu:</label>
+                                                                <input type="text" class="form-control" id="staff-password"/>
+                                                                <div class="fail"></div>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="staff-email" class="col-form-label">Email:</label>
-                                                                <input type="email" class="form-control" id="staff-email" oninvalid="InvalidMsg(this);" name="email" oninput="InvalidMsg(this);" type="email" required="required" />
+                                                                <input type="email" class="form-control" id="staff-email"/>
+                                                                <div class="fail"></div>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="staff-roles" class="col-form-label">Vai trò:</label>
@@ -220,7 +227,7 @@
                     <form id="form" action="" onsubmit="confirmFunction()">
                         <div class="col-8 col-sm-12" style="text-align: center ;">
                             <img src="../assets/image/long.png" alt="..." class="img-thumbnail" style="height: 200px; width: 200px; border-radius: 50%;">
-                            <div><input type="file" id="user_avatar" accept="image/png, image/jpeg">
+                            <div><input type="file" id="staff_avatar" accept="image/png, image/jpeg">
                             </div>
                         </div>
                         <div class="row">
@@ -232,9 +239,9 @@
                                             <label type="text" class="border border-secondary w-100 rounded label_box" readonly class="form-control-plaintext" id="staff-code">AC01</label>
                                         </div>
                                         <div class="form-group">
-                                            <label for="user-name" class="col-form-label">Họ và
+                                            <label for="staff-name" class="col-form-label">Họ và
                                                 tên:</label>
-                                            <input type="text" class="form-control" id="user-name" value="Phạm Quang Minh" required oninvalid="this.setCustomValidity('Xin hãy nhập tên nhân viên.')" oninput="this.setCustomValidity('')" />
+                                            <input type="text" class="form-control" id="staff-name" value="Phạm Quang Minh" required oninvalid="this.setCustomValidity('Xin hãy nhập tên nhân viên.')" oninput="this.setCustomValidity('')" />
                                         </div>
                                         <div class="form-group">
                                             <label for="staff-phone" class="col-form-label">Số điện
@@ -242,15 +249,15 @@
                                             <input type="text" class="form-control" value="0916362047" id="staff-phone" oninvalid="InvalidPhone(this);" name="phone" oninput="InvalidPhone(this);" required="required" />
                                         </div>
                                         <div class="form-group">
-                                            <label for="user-address" class="col-form-label">Địa chỉ:
+                                            <label for="staff-address" class="col-form-label">Địa chỉ:
                                                 </label>
-                                            <input type="text" class="form-control" value="118 Tây Hồ, Hoàn Kiếm, Hà Nội" id="user-address" required oninvalid="this.setCustomValidity('Xin hãy nhập địa chỉ nhân viên.')" oninput="this.setCustomValidity('')" />
+                                            <input type="text" class="form-control" value="118 Tây Hồ, Hoàn Kiếm, Hà Nội" id="staff-address" required oninvalid="this.setCustomValidity('Xin hãy nhập địa chỉ nhân viên.')" oninput="this.setCustomValidity('')" />
                                         </div>
                                         <div class="row">
                                             <div class="col">
                                                 <div class="form-group">
-                                                    <label for="user-dob" class="col-form-label">Ngày sinh</label>
-                                                    <input class="form-control" id="user-dob" name="date" placeholder="MM/DD/YYYY" value="2000-10-14" type="date" required oninvalid="this.setCustomValidity('Xin hãy nhập ngày sinh của nhân viên.')" oninput="this.setCustomValidity('')" />
+                                                    <label for="staff-dob" class="col-form-label">Ngày sinh</label>
+                                                    <input class="form-control" id="staff-dob" name="date" placeholder="MM/DD/YYYY" value="2000-10-14" type="date" required oninvalid="this.setCustomValidity('Xin hãy nhập ngày sinh của nhân viên.')" oninput="this.setCustomValidity('')" />
                                                 </div>
                                             </div>
                                             <div class="col">
@@ -274,7 +281,7 @@
                                             <input type="email" class="form-control" value="minhpq@daxua" id="staff-email" oninvalid="InvalidMsg(this);" name="email" oninput="InvalidMsg(this);" type="email" required="required" />
                                         </div>
                                         <div class="form-group">
-                                            <label for="user-password" class="col-form-label">Mật khẩu:</label><br>
+                                            <label for="staff-password" class="col-form-label">Mật khẩu:</label><br>
                                             <button type="button" class="btn btn-primary" style="width: 100%;" onclick="confirmChangePass()">Gửi mật khẩu mặc định</button>
                                         </div>
                                         <div class="form-group">
@@ -333,8 +340,9 @@
     <!-- Page level custom scripts -->
     <script src="../js/demo/datatables-demo.js "></script>
     <script src="../js/include-html.min.js "></script>
-    <script src="../js/confirm.js "></script>
-    <script src="../js/staff_validate.js "></script>
+    <script src="../js/valdation/confirm.js "></script>
+    <script src="../js/valdation/admin_validate.js "></script>
+    <script src="../js/fnon.min.js"></script>
 </body>
 
 </html>

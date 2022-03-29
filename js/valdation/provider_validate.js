@@ -26,11 +26,9 @@ const isValidPhone = phone => {
 const setError = (element, message) => {
     const inputControl = element.parentNode;
     const errorDisplay = inputControl.querySelector('.fail');
-    console.log(element.parentNode);
     errorDisplay.innerText = message;
     inputControl.classList.add('failed');
     inputControl.classList.remove('success')
-    console.log(x)
 }
 //Xét điều kiện để hiện thông báo thành công form add
 const setSuccess = element => {
@@ -43,31 +41,68 @@ const setSuccess = element => {
 };
 
 //Chạy hàm validate form add
-console.log(form);
 form.addEventListener('submit', e => {
     e.preventDefault();
-    x=0;
+    x = 0;
     validateInputs();
-    console.log('nah',x)
     if (x == 4) {
         Fnon.Ask.Danger({
-            title: 'Confirmation',
-            message: 'Are you sure?',
+            width: 'nl', // sm//lg//nl//xl
+            // closeButton: true,
+            animation: 'slide-top',//'fade', 'slide-top', 'slide-bottom', 'slide-right' and 'slide-left'
+            closeButton: false,
+            // callback: undefined,
+            // icon: undefined,
+            // iconColor: '#4e73df',
+            // showIcon: true,
+            message: 'Bạn có chắc chắn lưu thay đổi này?',
+
+            title: 'Thông báo xác nhận',
+            titleColor: '#fff',
+            titleBackground: '#4e73df',
+
+            btnOkText: 'Lưu',
+            btnOkColor: '#fff',
+            btnOkBackground: '#4e73df',
+            btnOkShadow: 'rgba(0, 0, 0, 0.5)',
+            btnOkBorderColor: '#d4d4d4',
+
+            btnCancelText: 'Hủy',
+            btnCancelColor: '#fff',
+            btnCancelBackground: '#4e73df',
+            btnCancelShadow: 'rgba(0, 0, 0, 0.5)',
+            btnCancelBorderColor: '#d4d4d4',
+
+            color: '#2b2b2b',
+            background: 'rgba(0, 0, 0, 0.1)',
             callback: (result) => {
-                console.log('result is: ', result);
                 if (result == true) {
                     Fnon.Alert.Dark({
-                        title: 'Alert Title',
-                        message: 'Alert Dialog',
+                        message: 'Đã lưu thành công',
+                        title: 'Xác nhận',
+                        titleBackground: '#4e73df',
+                        btnOkColor: '#fff',
+                        btnOkBackground: '#4e73df',
+                        color: '#2b2b2b',
+                        background: 'rgba(0, 0, 0, 0.1)',
+                        width: 'nl', // sm, lg, nl, xl
+                        // closeButton: true,
+                        animation: 'slide-top', // 'fade', 'slide-top', 'slide-bottom', 'slide-right' and 'slide-left'
+                        // closeButton: false,
+                        // icon: undefined,
+                        // iconColor: '#000',
+                        // showIcon: false,
+                        btnOkText: 'Ok',
+                        btnOkColor: '#fff',
+                        btnOkBackground: '#4e73df',
+                        btnOkShadow: 'rgba(0, 0, 0, 0.5)',
+                        btnOkBorderColor: '#d4d4d4',
                         callback: () => {
                             document.getElementById("form").submit();
-                            console.log('Dismissed');
                         }
                     });
                 } else {
-                    console.log('nah')
                     x = 0;
-                    console.log('nah',x)
                 }
             }
         });
@@ -143,20 +178,16 @@ form1.addEventListener('submit', e => {
             title: 'Confirmation',
             message: 'Are you sure?',
             callback: (result) => {
-                console.log('result is: ', result);
                 if (result == true) {
                     Fnon.Alert.Dark({
                         title: 'Alert Title',
                         message: 'Alert Dialog',
                         callback: () => {
                             document.getElementById("form1").submit();
-                            console.log('Dismissed');
                         }
                     });
                 } else {
-                    console.log('nah')
                     y = 0;
-                    console.log('nah',y)
                 }
             }
         });
