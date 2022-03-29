@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Product_List</title>
+    <!-- Favicon-->
+    <!-- Bootstrap icons-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link href="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- Core theme CSS (includes Bootstrap)-->
+
+    <link href="/css/check_out.css" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+    <header>
+        <div include-html="/components/header.html" id="header" style="display: contents;"></div>
+    </header>
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-4 order-md-2 mb-4">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted">Giỏ hàng của bạn</span>
+                    <span class="badge badge-secondary badge-pill">3</span>
+                </h4>
+                <ul class="list-group mb-3 sticky-top">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Product name</h6>
+                            <small class="text-muted">Brief description</small>
+                        </div>
+                        <span class="text-muted">$12</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Second product</h6>
+                            <small class="text-muted">Brief description</small>
+                        </div>
+                        <span class="text-muted">$8</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Third item</h6>
+                            <small class="text-muted">Brief description</small>
+                        </div>
+                        <span class="text-muted">$5</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Tổng tạm tính (VND)</span>
+                        <strong>$20</strong>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-8 order-md-1">
+                <h4 class="mb-3">Thông tin đơn hàng</h4>
+                <form class="needs-validation" novalidate="" id="myform">
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <label for="firstName">Họ và tên*</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="Nguyen Van A" value="" required="">
+                            <div class="invalid-feedback"> Hãy nhập họ tên của bạn. </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="myform_phone">Điện thoại*</label>
+                        <input type="text" class="form-control" id="myform_phone" placeholder="0977******" required="">
+                        <div class="invalid-feedback"> Hãy nhập số điện thoại của bạn </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email">Email <span class="text-muted">(Tùy chọn)</span></label>
+                        <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                        <div class="invalid-feedback"> Hãy nhập đúng định dạng của email (VD: you@example.com). </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="address">Địa chỉ*</label>
+                        <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+                        <div class="invalid-feedback"> Hãy nhập địa chỉ nhận hàng. </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="note">Ghi chú <span class="text-muted">(Tùy chọn)</span></label>
+                        <input type="textarea" class="form-control" id="note" placeholder="nhập ghi chú cho đơn hàng...">
+                    </div>
+
+                    <p><span style="color:red; font-style: italic;">Quý khách hàng lưu ý phần "Phụ phí (Bao gồm: tiền cọc vỏ, tiền vận chuyển,...)" sẽ được cập nhật trong hóa đơn sau khi nhân viên cửa hàng liên hệ để xác nhận đơn hàng.</span></p>
+                    <hr class="mb-4">
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Đặt hàng</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div include-html="/components/footer.html" id="footer" style="display: contents;"></div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/check_out.js"></script>
+    <script src="/js/include-html.min.js"></script>
+</body>
+
+</html>

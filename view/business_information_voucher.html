@@ -68,105 +68,104 @@
                                 </div>
                                 <div class="card-body">
                                     <!-- <div class="table-responsive"> -->
-
-                                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                            <div class="row" style="border: 2px solid lightgray;">
-                                                <div class="col-8 col-sm-1"></div>
-                                                <div class="col-8 col-sm-5">
-                                                    <label for="order-code" class="col-form-label">Mã đơn
+                                    <div class="row">
+                                        <div class="col-8 col-sm-1"></div>
+                                        <div class="col-8 col-sm-5">
+                                            <label for="order-code" class="col-form-label">Mã đơn
                                                         hàng:</label>
-                                                    <label type="text" class="border border-secondary w-100 p-2 rounded" id="order-code">LG240</label>
-                                                    <label for="order-price" class="col-form-label">Tổng giá
+                                            <label type="text" class="border border-secondary w-100 p-2 rounded" id="order-code">LG240</label>
+                                            <label for="order-price" class="col-form-label">Tổng giá
                                                         tiền:</label>
-                                                    <label type="text" class="border border-secondary w-100 p-2 rounded" id="order-price">6.589.000đ</label>
-                                                    <label for="staff-order" class="col-form-label">Nhân viên nhận
+                                            <label type="text" class="border border-secondary w-100 p-2 rounded" id="order-price">6.589.000đ</label>
+                                            <label for="staff-order" class="col-form-label">Nhân viên nhận
                                                         đơn:</label>
-                                                    <label type="text" class="border border-secondary w-100 p-2 rounded" id="staff-order">Truong
+                                            <label type="text" class="border border-secondary w-100 p-2 rounded" id="staff-order">Truong
                                                         Quang Phuoc</label>
-                                                    <label for="order-date" class="col-form-label">Ngày nhận
+                                            <label for="order-date" class="col-form-label">Ngày nhận
                                                         đơn:</label>
-                                                    <label type="text" class="border border-secondary w-100 p-2 rounded" id="order-date">10/03/2022</label>
-                                                    <label for="cus-note" class="col-form-label">Ghi chú của khách hàng:</label>
-                                                    <textarea class="border border-secondary w-100 p-2 rounded" readonly class="form-control-plaintext" id="order-note" style="resize: none; overflow: auto;"></textarea>
+                                            <label type="text" class="border border-secondary w-100 p-2 rounded" id="order-date">10/03/2022</label>
+                                            <label for="cus-note" class="col-form-label">Ghi chú của khách hàng:</label>
+                                            <textarea class="border border-secondary w-100 p-2 rounded" readonly class="form-control-plaintext" id="order-note" style="resize: none; overflow: auto;"></textarea>
 
-                                                </div>
-                                                <div class="col-8 col-sm-5">
-                                                    <label for="voucher-code" class="col-form-label">Mã phiếu thu:</label>
-                                                    <label type="text" class="border border-secondary w-100 p-2 rounded" id="voucher-code">LG240</label>
+                                        </div>
+                                        <div class="col-8 col-sm-5">
+                                            <label for="voucher-code" class="col-form-label">Mã phiếu thu:</label>
+                                            <label type="text" class="border border-secondary w-100 p-2 rounded" id="voucher-code">LG240</label>
 
-                                                    <label for="customer-name" class="col-form-label">Tên khách hàng:</label>
-                                                    <label type="text" class="border border-secondary w-100 p-2 rounded" id="customer-name">Truong Gia Viet Anh</label>
+                                            <label for="customer-name" class="col-form-label">Tên khách hàng:</label>
+                                            <label type="text" class="border border-secondary w-100 p-2 rounded" id="customer-name">Truong Gia Viet Anh</label>
 
-                                                    <label for="order-address" class="col-form-label">Địa chỉ khách
+                                            <label for="order-address" class="col-form-label">Địa chỉ khách
                                                         hàng:</label>
-                                                    <label type="text" class="border border-secondary w-100 p-2 rounded" id="order-address">118
+                                            <label type="text" class="border border-secondary w-100 p-2 rounded" id="order-address">118
                                                         Hồ Tây, Hoàn Kiếm, Hà Nội</label>
-                                                    </lable>
-                                                    <form id="form" action="business_new_order.html" onsubmit="confirmFunction()">
-                                                        <label for="order-status" class="col-form-label">Trạng
+                                            </lable>
+                                            <form id="form" action="business_new_order.html" onsubmit="confirmFunction()">
+                                                <label for="order-status" class="col-form-label">Trạng
                                                             thái:</label><br>
-                                                        <select name="order-status" id="order-status" class="border border-secondary w-100 p-2 rounded" style="margin-bottom: 8px;">
+                                                <select name="order-status" id="order-status" class="border border-secondary w-100 p-2 rounded" style="margin-bottom: 8px;">
                                                             <option value="status-1">Đang xử lí</option>
                                                             <option value="status-2">Đã nhận đơn</option>
                                                             <option value="status-3">Đơn bị hủy</option>
                                                             <option value="status-4">Đang vận chuyển</option>
                                                             <option value="status-5">Hoàn thành</option>
                                                         </select>
-                                                        <label for="order-note" class="col-form-label">Ghi chú của nhân viên:</label>
-                                                        <textarea class="border border-secondary w-100 p-2 rounded" id="order-note" style="resize: none; overflow: auto;"></textarea>
-                                                        <div style="margin-top: 2%; float: right ; padding:2%">
-                                                            <input type="submit" class="btn btn-primary submit px-3" value="Lưu"></input>
-                                                            <!-- <a href="business_new_order.html"><button type="button" class="btn btn-secondary" >Hủy</button></a> -->
-                                                        </div>
-                                                    </form>
-
+                                                <label for="order-note" class="col-form-label">Ghi chú của nhân viên:</label>
+                                                <textarea class="border border-secondary w-100 p-2 rounded" id="order-note" style="resize: none; overflow: auto;"></textarea>
+                                                <div style=" float: right ; padding-left:70%">
+                                                    <input type="submit" class="btn btn-primary submit px-3" value="Lưu"></input>
+                                                    <!-- <a href="business_new_order.html"><button type="button" class="btn btn-secondary" >Hủy</button></a> -->
                                                 </div>
-                                            </div>
-                                            <thead>
-                                                <tr>
-                                                    <th>Mã sản phẩm</th>
-                                                    <th>Tên sản phẩm</th>
-                                                    <th>Giá bán</th>
-                                                    <th>Số lượng</th>
-                                                    <th>Thành tiền</th>
+                                            </form>
 
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>LG101</td>
-                                                    <td>Bình gas 12kg</td>
-                                                    <td>499.000</td>
-                                                    <td>5</td>
-                                                    <td>2.495.000đ</td>
+                                        </div>
+                                    </div>
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Mã sản phẩm</th>
+                                                <th>Tên sản phẩm</th>
+                                                <th>Giá bán</th>
+                                                <th>Số lượng</th>
+                                                <th>Thành tiền</th>
 
-                                                </tr>
-                                                <tr>
-                                                    <td>LG102</td>
-                                                    <td>Bình gas 12kg</td>
-                                                    <td>499.000</td>
-                                                    <td>6</td>
-                                                    <td>2.994.000đ</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>LG101</td>
+                                                <td>Bình gas 12kg</td>
+                                                <td>499.000</td>
+                                                <td>5</td>
+                                                <td>2.495.000đ</td>
 
-                                                </tr>
-                                                <tr>
-                                                </tr>
-                                            </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <td colSpan="4" style="text-align: right;"><b>Tổng tiền sản phẩm:</b></td>
-                                                    <td>5.489.000đ</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colSpan="4" style="text-align: right;"><b>Tiền cọc vỏ bình:</b></td>
-                                                    <td>1.100.000đ</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colSpan="4" style="text-align: right;"><b>Tổng tiền khách phải trả:</b></td>
-                                                    <td>6.589.000đ</td>
-                                                </tr>
-                                            </tfoot>
-                                        </table>
+                                            </tr>
+                                            <tr>
+                                                <td>LG102</td>
+                                                <td>Bình gas 12kg</td>
+                                                <td>499.000</td>
+                                                <td>6</td>
+                                                <td>2.994.000đ</td>
+
+                                            </tr>
+                                            <tr>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colSpan="4" style="text-align: right;"><b>Tổng tiền sản phẩm:</b></td>
+                                                <td>5.489.000đ</td>
+                                            </tr>
+                                            <tr>
+                                                <td colSpan="4" style="text-align: right;"><b>Tiền cọc vỏ bình:</b></td>
+                                                <td>1.100.000đ</td>
+                                            </tr>
+                                            <tr>
+                                                <td colSpan="4" style="text-align: right;"><b>Tổng tiền khách phải trả:</b></td>
+                                                <td>6.589.000đ</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
                                     <!-- </div>           -->
                                 </div>
                             </div>
