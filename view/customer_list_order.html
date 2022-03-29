@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Order_List</title>
+    <!-- Favicon-->
+    <!-- Bootstrap icons-->
+
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="/css/home_product_list.css" rel="stylesheet" type="text/css">
+    <!-- Custom fonts for this template -->
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/styles/sb-admin-2.min.css" rel="stylesheet">
+    <link href="/assets/styles/slider_status.css" rel="stylesheet">
+    <link href="/assets/styles/icon_action.css" rel="stylesheet">
+    <!-- Custom styles for this page -->
+    <link href="/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div include-html="/components/header.html" id="header" style="display: contents;"></div>
+    </header>
+    <div class="container-fluid">
+        <h3 class="font-weight-bold mt-3 text-gray-800 text-center">Danh sách đơn hàng</h3>
+        <!-- Page Heading -->
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%">
+                        <tr>
+                            <th>Mã đơn hàng</th>
+                            <th>Ngày tạo đơn</th>
+                            <th>Ngày ghi nhận</th>
+                            <th>Trạng thái đơn hàng</th>
+                            <th>Tổng tiền</th>
+                            <th>Thao tác</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>LG01</td>
+                                <td>12/03/2022</td>
+                                <td>13/03/2022</td>
+                                <td>
+                                    <p id="status_pending">Đang xử lý</p>
+                                </td>
+                                <td>499.000</td>
+                                <td>
+                                    <a href="business_information_order.html" class="view"><i class="fas fa-eye" data-toggle="tooltip" title="view"></i></a>
+                                    <a href="#" class="cancel" data-toggle="modal"><i class="fas fa-times-circle" data-toggle="tooltip" title="cancel"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div include-html="/components/footer.html" id="footer" style="display: contents;"></div>
+    </footer>
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Custom scripts for all pages-->
+    <script src="/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/js/demo/datatables-demo.js"></script>
+    <script src="/js/include-html.min.js"></script>
+    <script src="/js/confirm.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+
+</html>
