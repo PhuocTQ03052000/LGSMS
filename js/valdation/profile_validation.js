@@ -117,7 +117,7 @@ const validateInputs = () => {
     if (phoneValue === '') {
         setError(phone, 'Yêu cầu nhập số điện thoại');
     } else if (!isValidPhone(phoneValue)) {
-        setError(phone, 'Nhập đúng định dạng số điện thoại');
+        setError(phone, 'Nhập đúng định dạng số điện thoại có 10 chữ số');
     } else {
         setSuccess(phone);
     }
@@ -126,7 +126,7 @@ const validateInputs = () => {
     if (emailValue === '') {
         setError(email, 'Yêu cầu nhập địa chỉ email');
     } else if (!isValidEmail(emailValue)) {
-        setError(email, 'Nhập đúng định dạng email');
+        setError(email, 'Nhập đúng định dạng email your@example.com');
     } else {
         setSuccess(email);
     }
