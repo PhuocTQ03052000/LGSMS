@@ -151,25 +151,25 @@ const validateInputs = () => {
     }
     //Thông báo tên nhân viên
     if (nameValue === '') {
-        setError(aname, 'Yêu cần nhập tên nhân viên');
+        setError(aname, 'Yêu cầu nhập tên nhân viên');
     } else {
         setSuccess(aname);
     }
     //Thông báo ngày sinh 
     if (dobValue === '') {
-        setError(dob, 'Yêu cần chọn ngày sinh');
+        setError(dob, 'Yêu cầu chọn ngày sinh');
     } else {
         setSuccess(dob);
     }
     //Thông báo tên đăng nhập
     if (usernameValue === '') {
-        setError(username, 'Yêu cần nhập tên đăng nhập của nhân viên');
+        setError(username, 'Yêu cầu nhập tên đăng nhập của nhân viên');
     } else {
         setSuccess(username);
     }
     //Thông báo mật khẩu
     if (passValue === '') {
-        setError(pass, 'Yêu cần nhập mật khẩu cho nhân viên');
+        setError(pass, 'Yêu cầu nhập mật khẩu cho nhân viên');
     } else {
         setSuccess(pass);
     }
@@ -296,19 +296,19 @@ const validateInputs1 = () => {
 
     //Thông báo tên nhân viên
     if (nameValue1 === '') {
-        setError1(aname1, 'Yêu cần nhập tên nhân viên');
+        setError1(aname1, 'Yêu cầunhập tên nhân viên');
     } else {
         setSuccess1(aname1);
     }
     //Thông báo ngày sinh 
     if (dobValue1 === '') {
-        setError1(dob1, 'Yêu cần chọn ngày sinh');
+        setError1(dob1, 'Yêu cầuchọn ngày sinh');
     } else {
         setSuccess1(dob1);
     }
     //Thông báo tên đăng nhập
     if (usernameValue1 === '') {
-        setError1(username1, 'Yêu cần nhập tên đăng nhập của nhân viên');
+        setError1(username1, 'Yêu cầunhập tên đăng nhập của nhân viên');
     } else {
         setSuccess1(username1);
     }

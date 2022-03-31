@@ -138,13 +138,13 @@ const validateInputs = () => {
     }
     //Thông báo tên nhân viên
     if (nameValue === '') {
-        setError(aname, 'Yêu cần nhập họ và tên');
+        setError(aname, 'Yêu cầu nhập họ và tên');
     } else {
         setSuccess(aname);
     }
     //Thông báo ngày sinh 
     if (dobValue === '') {
-        setError(dob, 'Yêu cần chọn ngày sinh');
+        setError(dob, 'Yêu cầu chọn ngày sinh');
     } else {
         setSuccess(dob);
     }

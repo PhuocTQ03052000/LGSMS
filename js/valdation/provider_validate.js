@@ -142,7 +142,7 @@ const validateInputs = () => {
     }
     //Thông báo tên nhà cung cấp
     if (nameValue === '') {
-        setError(pname, 'Yêu cần nhập tên nhà cung cấp');
+        setError(pname, 'Yêu cầu nhập tên nhà cung cấp');
     } else {
         setSuccess(pname);
     }
@@ -223,7 +223,7 @@ const validateInputs1 = () => {
     }
     //Thông báo tên nhà cung cấp
     if (nameValue1 === '') {
-        setError1(pname1, 'Yêu cần nhập tên nhà cung cấp');
+        setError1(pname1, 'Yêu cầu nhập tên nhà cung cấp');
     } else {
         setSuccess1(pname1);
     }

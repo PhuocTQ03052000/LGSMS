@@ -1,9 +1,6 @@
-// Lấy input
 let x = 0;
-let y = 0;
 const form = document.getElementById('form');
-const price = document.getElementById('product-price');
-const quantity = document.getElementById('product-quantity');
+const price = document.getElementById('order-deposit');
 
 //Xét điều kiện để hiện thông báo lỗi form add
 const setError = (element, message) => {
@@ -28,16 +25,11 @@ form.addEventListener('submit', e => {
     e.preventDefault();
     x = 0;
     validateInputs();
-    if (x == 2) {
+    if (x == 1) {
         Fnon.Ask.Danger({
-            width: 'nl', // sm//lg//nl//xl
-            // closeButton: true,
-            animation: 'slide-top',//'fade', 'slide-top', 'slide-bottom', 'slide-right' and 'slide-left'
+            width: 'nl',
+            animation: 'slide-top',
             closeButton: false,
-            // callback: undefined,
-            // icon: undefined,
-            // iconColor: '#4e73df',
-            // showIcon: true,
             message: 'Bạn có chắc chắn lưu thay đổi này?',
 
             title: 'Thông báo xác nhận',
@@ -68,13 +60,8 @@ form.addEventListener('submit', e => {
                         btnOkBackground: '#4e73df',
                         color: '#2b2b2b',
                         background: 'rgba(0, 0, 0, 0.1)',
-                        width: 'nl', // sm, lg, nl, xl
-                        // closeButton: true,
-                        animation: 'slide-top', // 'fade', 'slide-top', 'slide-bottom', 'slide-right' and 'slide-left'
-                        // closeButton: false,
-                        // icon: undefined,
-                        // iconColor: '#000',
-                        // showIcon: false,
+                        width: 'nl',
+                        animation: 'slide-top',
                         btnOkText: 'Ok',
                         btnOkColor: '#fff',
                         btnOkBackground: '#4e73df',
@@ -95,18 +82,7 @@ form.addEventListener('submit', e => {
 
 //Trim input và các thông báo form add
 const validateInputs = () => {
-    const quantityValue = quantity.value.trim();
     const priceValue = price.value.trim();
-    
-    //Thông báo nhập địa chỉ
-    if (quantityValue === '') {
-        setError(quantity, 'Yêu cầu nhập số lượng sản phẩm');
-    } else if (quantityValue < 1) {
-        setError(quantity, 'Yêu cầu nhập đúng số lượng sản phẩm');
-    }
-     else {
-        setSuccess(quantity);
-    }
     //Thông báo tên nhà cung cấp
     if (priceValue === '') {
         setError(price, 'Yêu cầu nhập giá sản phẩm');

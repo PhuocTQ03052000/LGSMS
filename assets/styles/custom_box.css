@@ -18,11 +18,11 @@ input::-webkit-inner-spin-button {
 }
 
 .form-group.success input {
-  border-color: #09c372;
+  border-color: #09c372 !important;
 }
 
 .form-group.failed input {
-  border-color: #ff3860;
+  border-color: #ff3860 !important;
 }
 
 .form-group .fail {

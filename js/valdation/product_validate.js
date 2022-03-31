@@ -115,7 +115,7 @@ const validateInputs = () => {
     }
     //Thông báo nhập giá
     if (priceValue === '') {
-        setError(price, 'Yêu cần nhập giá sản phẩm');
+        setError(price, 'Yêu cầu nhập giá sản phẩm');
     }else if (priceValue < 1) {
         setError(price, 'Yêu cầu nhập đúng giá sản phẩm'); 
     } else {
