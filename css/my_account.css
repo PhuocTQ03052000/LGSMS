@@ -217,7 +217,6 @@
 }
 
 .profile-button {
-    width: 120px;
-    margin-top: 2%;
-    margin-left: 71%;
+    width: auto;
+    float: right;
 }
