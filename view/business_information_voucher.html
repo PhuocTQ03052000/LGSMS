@@ -179,18 +179,21 @@
 
     <!-- Page level custom scripts -->
     <script src="../js/include-html.min.js"></script>
-    <script src="../js/valdation/voucher_validation.js"></script>
+    <!-- <script src="../js/valdation/voucher_validation.js"></script> -->
     <script src="../js/fnon.min.js"></script>
+    <!-- <script src="../js/valdation/alert.js"></script> -->
     <script>
         var deposit = document.getElementById('order-deposit'),
             total = document.getElementById('order-price'),
             payment = document.getElementById('cus-pay');
-            payment.value = total.value;
+            const num = 0;
+            payment.value = total.value
         deposit.onchange = function () {
-            var result = parseFloat(total.value) - parseFloat(deposit.value);
-            if(deposit.value){
-                payment.value = total.value;
+            if(deposit.value ==""){
+                var result = parseFloat(total.value) - parseFloat(num);
+                payment.value = result;
             }else{
+            var result = parseFloat(total.value) - parseFloat(deposit.value);
             payment.value = !isNaN(result) ? result : '';
             }
         };
