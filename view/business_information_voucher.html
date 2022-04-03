@@ -185,10 +185,14 @@
         var deposit = document.getElementById('order-deposit'),
             total = document.getElementById('order-price'),
             payment = document.getElementById('cus-pay');
-            payment.value = total.value
+            payment.value = total.value;
         deposit.onchange = function () {
             var result = parseFloat(total.value) - parseFloat(deposit.value);
+            if(deposit.value){
+                payment.value = total.value;
+            }else{
             payment.value = !isNaN(result) ? result : '';
+            }
         };
     </script>
 </body>
