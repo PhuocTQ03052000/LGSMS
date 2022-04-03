@@ -78,7 +78,7 @@ const validateInputs = () => {
     }
     //Thông báo xác nhận mật khảu
     if (re_passwordValue === '') {
-        setError(re_password, 'Yêu cần xác nhận mật khẩu');
+        setError(re_password, 'Yêu cầu xác nhận mật khẩu');
     } else if (re_passwordValue !== passwordValue) {
         setError(re_password, "Không trùng với mật khẩu");
     } else {
@@ -87,7 +87,7 @@ const validateInputs = () => {
 
     //Thông báo tài khoản
     if (accountValue === '') {
-        setError(account, 'Yêu cần nhập tên tài khoản');
+        setError(account, 'Yêu cầu nhập tên tài khoản');
     } else {
         setSuccess(account);
     }
