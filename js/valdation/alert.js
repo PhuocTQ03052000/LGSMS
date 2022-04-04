@@ -1,13 +1,10 @@
+// sessionStorage.setItem('alert', false);
+// sessionStorage.setItem('change', false);
 function alertFunction() {
     Fnon.Ask.Danger({
-        width: 'nl', // sm//lg//nl//xl
-        // closeButton: true,
-        animation: 'slide-top',//'fade', 'slide-top', 'slide-bottom', 'slide-right' and 'slide-left'
+        width: 'nl',
+        animation: 'slide-top',
         closeButton: false,
-        // callback: undefined,
-        // icon: undefined,
-        // iconColor: '#4e73df',
-        // showIcon: true,
         message: 'Bạn có chắc chắn lưu thay đổi này?',
 
         title: 'Thông báo xác nhận',
@@ -30,51 +27,68 @@ function alertFunction() {
         background: 'rgba(0, 0, 0, 0.1)',
         callback: (result) => {
             if (result == true) {
-                Fnon.Alert.Dark({
-                    message: 'Đã lưu thành công',
-                    title: 'Xác nhận',
-                    titleBackground: '#4e73df',
-                    btnOkColor: '#fff',
-                    btnOkBackground: '#4e73df',
-                    color: '#2b2b2b',
-                    background: 'rgba(0, 0, 0, 0.1)',
-                    width: 'nl', // sm, lg, nl, xl
-                    // closeButton: true,
-                    animation: 'slide-top', // 'fade', 'slide-top', 'slide-bottom', 'slide-right' and 'slide-left'
-                    // closeButton: false,
-                    // icon: undefined,
-                    // iconColor: '#000',
-                    // showIcon: false,
-                    btnOkText: 'Ok',
-                    btnOkColor: '#fff',
-                    btnOkBackground: '#4e73df',
-                    btnOkShadow: 'rgba(0, 0, 0, 0.5)',
-                    btnOkBorderColor: '#d4d4d4',
-                    callback: () => {
-                        document.getElementById("form").submit();
-                    }
-                });
-        } else {
-            x = 0;
-            y = 0;
+                document.getElementById("form").submit();
+                sessionStorage.setItem('alert', true);
+            } else {
+                Fnon.Hint.Dark('Đã hủy thao tác', {
+                    fontFamily:'"Quicksand", sans-serif',
+                    position: 'center-top', // 'right-top', 'right-center', 'right-bottom', 'left-top', 'left-center', 'left-bottom', 'center-top', 'center-center', 'center-bottom'
+                    spacing: '16px',
+                    svgSize: { w: '160px', h: '160px' },
+                    textColor: '#fff',
+                    fontSize: '16px',
+                    backgroundColor: '#4e73df',
+                    shadowColor: 'rgba(2, 158, 255, 0.3)',
+                    width: '300px',
+                    zindex: 4000,
+                    animation: 'slide-top', //'fade', 'slide-top', 'slide-bottom', 'slide-right' and 'slide-left'
+                    animationDuration: 500,
+                    displayDuration: 3000,
+                    progressColor: 'rgba(255,255,255,0.9)',
+                    callback:undefined,
+                  });
+                x = 0;
+                y = 0;
+            }
+
         }
-    }
-});
+    });
 }
+$(function () {
+    if (sessionStorage.getItem('alert') != "false") {
+        Fnon.Alert.Dark({
+            message: 'Đã lưu thành công',
+            title: 'Xác nhận',
+            titleBackground: '#4e73df',
+            btnOkColor: '#fff',
+            btnOkBackground: '#4e73df',
+            color: '#2b2b2b',
+            background: 'rgba(0, 0, 0, 0.1)',
+            width: 'nl',
+            animation: 'slide-top',
+
+            btnOkText: 'Ok',
+            btnOkColor: '#fff',
+            btnOkBackground: '#4e73df',
+            btnOkShadow: 'rgba(0, 0, 0, 0.5)',
+            btnOkBorderColor: '#d4d4d4',
+            callback: () => {
+            }
+        });
+        sessionStorage.setItem('alert', false);
+    }
+}
+);
+
 function confirmFunction() {
     alertFunction();
 }
 
 function confirmChangePass() {
     Fnon.Ask.Dark({
-        width: 'nl', // sm//lg//nl//xl
-        // closeButton: true,
-        animation: 'slide-top',//'fade', 'slide-top', 'slide-bottom', 'slide-right' and 'slide-left'
+        width: 'nl',
+        animation: 'slide-top',
         closeButton: false,
-        // callback: undefined,
-        // icon: undefined,
-        // iconColor: '#4e73df',
-        // showIcon: true,
         message: 'Bạn có chắc chắn với việc thay đổi mật khẩu này?',
 
         title: 'Thông báo xác nhận',
@@ -97,35 +111,55 @@ function confirmChangePass() {
         background: 'rgba(0, 0, 0, 0.1)',
         callback: (result) => {
             if (result == true) {
-                Fnon.Alert.Dark({
-                    message: 'Đã thay đổi thành công',
-                    title: 'Xác nhận',
-                    titleBackground: '#4e73df',
-                    btnOkColor: '#fff',
-                    btnOkBackground: '#4e73df',
-                    color: '#2b2b2b',
-                    background: 'rgba(0, 0, 0, 0.1)',
-                    width: 'nl', // sm, lg, nl, xl
-                    // closeButton: true,
-                    animation: 'slide-top', // 'fade', 'slide-top', 'slide-bottom', 'slide-right' and 'slide-left'
-                    // closeButton: false,
-                    // icon: undefined,
-                    // iconColor: '#000',
-                    // showIcon: false,
-                    btnOkText: 'Ok',
-                    btnOkColor: '#fff',
-                    btnOkBackground: '#4e73df',
-                    btnOkShadow: 'rgba(0, 0, 0, 0.5)',
-                    btnOkBorderColor: '#d4d4d4',
-                    callback: () => {
-                        location.reload();
-                    }
-                });
-            } else {
+                location.reload;
+                sessionStorage.setItem('change', true);
+            }else{
+                Fnon.Hint.Dark('Đã hủy thao tác', {
+                    fontFamily:'"Quicksand", sans-serif',
+                    position: 'center-top', // 'right-top', 'right-center', 'right-bottom', 'left-top', 'left-center', 'left-bottom', 'center-top', 'center-center', 'center-bottom'
+                    spacing: '16px',
+                    svgSize: { w: '16px', h: '16px' },
+                    textColor: '#fff',
+                    fontSize: '16px',
+                    backgroundColor: '#4e73df',
+                    shadowColor: 'rgba(2, 158, 255, 0.3)',
+                    width: '300px',
+                    zindex: 4000,
+                    animation: 'slide-top', //'fade', 'slide-top', 'slide-bottom', 'slide-right' and 'slide-left'
+                    animationDuration: 500,
+                    displayDuration: 3000,
+                    progressColor: 'rgba(255,255,255,0.9)',
+                    callback:undefined,
+                  });
             }
         }
     });
 }
+$(function () {
+    if (sessionStorage.getItem('change') != "false") {
+        Fnon.Alert.Dark({
+            message: 'Đã gửi mã thay đổi thành công',
+            title: 'Xác nhận',
+            titleBackground: '#4e73df',
+            btnOkColor: '#fff',
+            btnOkBackground: '#4e73df',
+            color: '#2b2b2b',
+            background: 'rgba(0, 0, 0, 0.1)',
+            width: 'nl',
+            animation: 'slide-top',
+
+            btnOkText: 'Ok',
+            btnOkColor: '#fff',
+            btnOkBackground: '#4e73df',
+            btnOkShadow: 'rgba(0, 0, 0, 0.5)',
+            btnOkBorderColor: '#d4d4d4',
+            callback: () => {
+            }
+        });
+        sessionStorage.setItem('change', false);
+    }
+}
+);
 
 //Điều kiện email
 const isValidEmail = email => {
@@ -152,7 +186,7 @@ const setSuccess = element => {
     errorDisplay.innerText = '';
     inputControl.classList.add('success');
     inputControl.classList.remove('failed');
-    x = x + 1;   
+    x = x + 1;
 };
 
 //Xét điều kiện để hiện thông báo lỗi form edit
@@ -171,5 +205,5 @@ const setSuccess1 = element => {
     inputControl.classList.add('success');
     inputControl.classList.remove('failed');
     y = y + 1;
-    
+
 };
