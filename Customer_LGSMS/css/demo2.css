@@ -1,23 +1,14 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-}
-
-body {
-    background: #ffccbc;
-}
-
 .action {
-    position: fixed;
+    /* display: inline-block;
+    position: fixed; */
     top: 20px;
-    right: 30px;
+    right: 80px;
 }
 
 .action .profile {
     position: relative;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
@@ -35,7 +26,7 @@ body {
 .action .menu {
     position: absolute;
     top: 120px;
-    right: -10px;
+    right: 55px;
     padding: 10px 20px;
     background: #fff;
     width: 200px;
@@ -47,7 +38,7 @@ body {
 }
 
 .action .menu.active {
-    top: 80px;
+    top: 90px;
     visibility: visible;
     opacity: 1;
 }
@@ -66,7 +57,7 @@ body {
 .action .menu h3 {
     width: 100%;
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
     padding: 20px 0;
     font-weight: 500;
     color: #555;
