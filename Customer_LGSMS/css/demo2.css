@@ -1,7 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #ffccbc;
+}
+
 .action {
-    display: inline-block;
-    top: 10px;
-    right: 80px;
+    position: fixed;
+    top: 20px;
+    right: 30px;
 }
 
 .action .profile {
@@ -24,7 +34,7 @@
 
 .action .menu {
     position: absolute;
-    top: 80px;
+    top: 120px;
     right: -10px;
     padding: 10px 20px;
     background: #fff;
@@ -36,14 +46,14 @@
     opacity: 0;
 }
 
-.action .menu .active {
-    visibility: visible;
+.action .menu.active {
     top: 80px;
+    visibility: visible;
     opacity: 1;
 }
 
 .action .menu::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -5px;
     right: 28px;
@@ -56,22 +66,22 @@
 .action .menu h3 {
     width: 100%;
     text-align: center;
-    font-size: 15px;
+    font-size: 18px;
     padding: 20px 0;
     font-weight: 500;
     color: #555;
-    line-height: 1.2em;
+    line-height: 1.5em;
 }
 
 .action .menu h3 span {
     font-size: 14px;
     color: #cecece;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .action .menu ul li {
     list-style: none;
-    padding: 10px 0;
+    padding: 16px 0;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center;

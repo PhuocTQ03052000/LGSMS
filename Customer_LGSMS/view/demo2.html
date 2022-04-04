@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+    <link href="/css/demo2.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="action">
+        <div class="profile" onclick="menuToggle();">
+            <img src="/images/long.png" />
+        </div>
+        <div class="menu">
+            <h3>Someone Famous<br /><span>Website Designer</span></h3>
+            <ul>
+                <ul>
+                    <li><img src="/images/user.png"> <a href="#!" class="">Hồ Sơ Của Tôi</a></li>
+                    <li><img src="/images/invoice.png"> <a href="#!" class="">Đơn Mua</a></li>
+                    <li><img src="/images/settings.png"> <a href="#!" class="">Đổi Mật Khẩu</a></li>
+                    <li><img src="/images/logout.png"> <a href="#!" class="">Đăng Xuất</a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function menuToggle() {
+            const toggleMenu = document.querySelector(".menu");
+            toggleMenu.classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>
