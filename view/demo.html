@@ -1,142 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Order_List</title>
-    <link href="/css/demo.css" rel="stylesheet" type="text/css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
-
 <body>
-    <header>
-        <div include-html="/components/header.html" id="header" style="display: contents;"></div>
-    </header>
-    <div class="container-fluid mt-4">
-        <!-- DataTales Example -->
-        <div class="row">
-            <div class="col-8 col-sm-12">
-                <div class="card mb-4">
-                    <div class="card-header py-3">
-                        <h3 class="font-weight-bold text-gray-800">Thông tin đơn hàng</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-8 col-sm-5 ml-3 border-right">
-                                <label type="text" class="border-bottom w-100 p-2 rounded" id="order-code">Mã đơn
-                                    hàng: LG240 <span>  |  </span>Đang xử lí</label>
-                                <label type="text" class="border-bottom w-100 p-2 rounded" id="customer-name">Họ tên: Truong Gia Viet Anh</label>
-                                <label type="text" class="border-bottom w-100 p-2 rounded" id="order-phone">Điện thoại: 1189866124</label>
-                                <label type="text" class="border-bottom w-100 p-2 rounded" id="order-address">Địa chỉ: 118
-                                    Hồ Tây, Hoàn Kiếm, Hà Nội</label>
-                                <label type="text" class="border-bottom w-100 p-2 rounded" id="order-note">Ghi chú:</label>
-                            </div>
-                            <div class="col-8 col-sm-5 ml-3">
-                                <ul class="timeline">
-                                    <li>
-                                        <span>24/03/2022</span>
-                                        <span>Hoàn thành đơn hàng</span>
-                                    </li>
-                                    <li>
-                                        <span>23/03/2022</span>
-                                        <span>Giao hàng thành công</span>
-                                    </li>
-                                    <li>
-                                        <span>22/03/2022</span>
-                                        <span>Đơn hàng đang vận chuyển</span>
 
-                                    </li>
-                                    <li>
-                                        <span>20/03/2022</span>
-                                        <span>Đơn hàng đang được chuẩn bị</span>
+<h1>The button Element</h1>
 
-                                    </li>
-                                    <li>
-                                        <span>19/03/2022</span>
-                                        <span>Đơn hàng đã được xác nhận</span>
+<button type="button" id="butt">Click Me!</button>
+ 
 
-                                    </li>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        window.location.reload();
+        sessionStorage.setItem('test',true);   
+        
+    });      
+});
 
-                            </div>
-                            <div class="table-responsive mt-4">
-                                <table class="table table-bordered" id="dataTable" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th width="8%"></th>
-                                            <th width="10%">Mã sản phẩm</th>
-                                            <th width="20%">Tên sản phẩm</th>
-                                            <th width="20%">Thương hiệu</th>
-                                            <th width="8%">Số lượng</th>
-                                            <th width="10%">Giá bán</th>
-                                            <th width="10%">Thành tiền</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><img src="/assets/image/gastank12kg_vanngang.jpg" width="70" height="70">
-                                            </td>
-                                            <td>LG101</td>
-                                            <td>Bình gas 12kg</td>
-                                            <td>Petrolimex Gas</td>
-                                            <td>5</td>
-                                            <td>499.000</td>
-                                            <td>2.495.000đ</td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="/assets/image/gastank12kg_vanngang.jpg" width="70" height="70"></td>
-                                            <td>LG102</td>
-                                            <td>Bình gas 12kg</td>
-                                            <td>Petrolimex Gas</td>
-                                            <td>6</td>
-                                            <td>499.000</td>
-                                            <td>2.994.000đ</td>
 
-                                        </tr>
-                                        <tfoot>
-                                            <tr>
-                                                <td colSpan="6" style="text-align: right;">Tổng tiền hàng</td>
-                                                <td>5.489.000đ</td>
-                                            </tr>
-                                            <tr>
-                                                <td colSpan="6" style="text-align: right;">Phí vận chuyển</td>
-                                                <td>0đ</td>
-                                            </tr>
-                                            <tr>
-                                                <td colSpan="6" style="text-align: right;">Tiền cọc bình</td>
-                                                <td>1.100.000đ</td>
-                                            </tr>
-                                            <tr>
-                                                <td colSpan="6" style="text-align: right;">Tổng số tiền</td>
-                                                <td>6.100.000đ</td>
-                                            </tr>
-                                        </tfoot>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <a href="#"> <i class="fa fa-chevron-left"></i> Trở lại</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+$( function () {
+        if ( sessionStorage.getItem('test') != "false" ) {
+            alert( "world" );
+            sessionStorage.setItem('test',false);   
+        }
+    } 
+);
+</script>
 
-        </div>
-    </div>
-    <footer>
-        <div include-html="/components/footer.html" id="footer" style="display: contents;"></div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/include-html.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </body>
-
 </html>
