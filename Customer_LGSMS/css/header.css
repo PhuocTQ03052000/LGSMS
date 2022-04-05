@@ -144,7 +144,7 @@ input[type="checkbox"] {
 
 .dropdown-content a:hover {
     color: #FFFFFF;
-    background-color: #00A4BD;
+    background: radial-gradient(100% 100% at 100% 0, #76dffc 0, #7585ff 100%);
 }
 
 @media screen and (max-width: 1200px) {
