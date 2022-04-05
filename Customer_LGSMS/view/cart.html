@@ -16,35 +16,7 @@
 
 <body>
     <div class="header">
-        <div class="container">
-            <div class="navbar">
-                <div class="logo">
-                    <a href="#"><img src="/images/logoNgang.PNG" width="125px" height="auto" alt=""></a>
-                </div>
-                <nav>
-                    <ul>
-                        <li>
-                            <form>
-                                <input type="text" placeholder=" Nhập từ khóa...">
-                                <a class="button-search"><i class="fas fa-search"></i></a>
-                            </form>
-                        </li>
-                    </ul>
-
-                    <ul id="menuItems">
-                        <li>
-                            <a href="home.html"><i class="fa fa-home" aria-hidden="true"></i> Trang Chủ</a>
-                        </li>
-                        <li><a href="product_list.html">Sản Phẩm</a></li>
-
-                        <li><a href="account.html">Tài Khoản</a></li>
-                    </ul>
-                </nav>
-                <a href="cart.html"><i class="fa fa-shopping-cart" ></i></a>
-                <img src="/images/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
-            </div>
-
-        </div>
+        <div include-html="header.html" id="header"></div>
     </div>
 
 
@@ -120,48 +92,13 @@
 
     </div>
     <!-- footer-->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col-1">
-                    <img src="/images/logoDoc.PNG" alt="">
-                </div>
-                <div class="footer-col-2">
-                    <h3>Sản phẩm</h3>
-                    <ul>
-                        <li> <a href="#!" class="">Tất cả sản phẩm</a></li>
-                        <li> <a href="#!" class="">Sản phẩm bán chạy</a></li>
-                        <li> <a href="#!" class="">Sản phẩm mới</a></li>
-                        <li> <a href="#!" class="">Sản phẩm khuyến mại</a></li>
+    <div include-html="footer.html" id="footer"></div>
+    <!-- footer-->
 
-                    </ul>
-                </div>
 
-                <div class="footer-col-3">
-                    <h3>Liên hệ</h3>
-                    <ul>
-                        <li> <a href="#!" class=""><i class="fa fa-home" aria-hidden="true"></i> 412 Ngọc Thụy, Long Biên, Hà Nội</a></li>
-                        <li> <a href="#!" class=""><i class="fa fa-envelope" aria-hidden="true"></i> vanhsibungas@petro.com</a></li>
-                        <li> <a href="#!" class=""><i class="fa fa-phone-square" aria-hidden="true"></i> +01 234 567 88</a></li>
-                        <li> <a href="#!" class=""><i class="fa fa-phone-square" aria-hidden="true"></i> +01 234 567 89</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--js for toggle menu-->
-    <script>
-        var menuItems = document.getElementById("menuItems");
-        menuItems.style.maxHeight = "0px";
 
-        function menutoggle() {
-            if (menuItems.style.maxHeight == "0px") {
-                menuItems.style.maxHeight = "200px";
-            } else {
-                menuItems.style.maxHeight = "0px";
-            }
-        }
-    </script>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/include-html.min.js"></script>
 
 </body>
 
