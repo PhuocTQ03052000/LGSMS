@@ -1,5 +1,19 @@
-// sessionStorage.setItem('alert', false);
-// sessionStorage.setItem('change', false);
+
+// window.onload = function () {
+//     if (!ls.exists('has_code_run_before')) {
+//         sessionStorage.setItem('alert', false);
+//     sessionStorage.setItem('change', false);
+//         ls.set.single('has_code_run_before', true);
+//         sessionStorage.setItem('alert', false);
+//         sessionStorage.setItem('change', false);
+//         /** or... you can use a callback. **/
+//         ls.set.single('has_code_run_before', true, function () {
+//             sessionStorage.setItem('alert', false);
+//             sessionStorage.setItem('change', false);
+//         });
+//     }
+// };
+console.log(sessionStorage)
 function alertFunction() {
     Fnon.Ask.Danger({
         width: 'nl',
@@ -29,6 +43,7 @@ function alertFunction() {
             if (result == true) {
                 document.getElementById("form").submit();
                 sessionStorage.setItem('alert', true);
+                console.log("no")
             } else {
                 Fnon.Hint.Dark('Đã hủy thao tác', {
                     fontFamily:'"Quicksand", sans-serif',
@@ -76,6 +91,7 @@ $(function () {
             }
         });
         sessionStorage.setItem('alert', false);
+        console.log(sessionStorage)
     }
 }
 );
@@ -112,7 +128,23 @@ function confirmChangePass() {
         callback: (result) => {
             if (result == true) {
                 location.reload;
-                sessionStorage.setItem('change', true);
+                Fnon.Hint.Dark('Đã gửi mật khẩu mới', {
+                    fontFamily:'"Quicksand", sans-serif',
+                    position: 'center-top', // 'right-top', 'right-center', 'right-bottom', 'left-top', 'left-center', 'left-bottom', 'center-top', 'center-center', 'center-bottom'
+                    spacing: '16px',
+                    svgSize: { w: '16px', h: '16px' },
+                    textColor: '#fff',
+                    fontSize: '16px',
+                    backgroundColor: '#4e73df',
+                    shadowColor: 'rgba(2, 158, 255, 0.3)',
+                    width: '300px',
+                    zindex: 4000,
+                    animation: 'slide-top', //'fade', 'slide-top', 'slide-bottom', 'slide-right' and 'slide-left'
+                    animationDuration: 500,
+                    displayDuration: 3000,
+                    progressColor: 'rgba(255,255,255,0.9)',
+                    callback:undefined,
+                  });
             }else{
                 Fnon.Hint.Dark('Đã hủy thao tác', {
                     fontFamily:'"Quicksand", sans-serif',
@@ -135,31 +167,47 @@ function confirmChangePass() {
         }
     });
 }
-$(function () {
-    if (sessionStorage.getItem('change') != "false") {
-        Fnon.Alert.Dark({
-            message: 'Đã gửi mã thay đổi thành công',
-            title: 'Xác nhận',
-            titleBackground: '#4e73df',
-            btnOkColor: '#fff',
-            btnOkBackground: '#4e73df',
-            color: '#2b2b2b',
-            background: 'rgba(0, 0, 0, 0.1)',
-            width: 'nl',
-            animation: 'slide-top',
+// $(function () {
+//     if (sessionStorage.getItem('change') != "false") {
+//         Fnon.Alert.Dark({
+//             message: 'Đã gửi mã thay đổi thành công',
+//             title: 'Xác nhận',
+//             titleBackground: '#4e73df',
+//             btnOkColor: '#fff',
+//             btnOkBackground: '#4e73df',
+//             color: '#2b2b2b',
+//             background: 'rgba(0, 0, 0, 0.1)',
+//             width: 'nl',
+//             animation: 'slide-top',
 
-            btnOkText: 'Ok',
-            btnOkColor: '#fff',
-            btnOkBackground: '#4e73df',
-            btnOkShadow: 'rgba(0, 0, 0, 0.5)',
-            btnOkBorderColor: '#d4d4d4',
-            callback: () => {
-            }
-        });
-        sessionStorage.setItem('change', false);
-    }
-}
-);
+//             btnOkText: 'Ok',
+//             btnOkColor: '#fff',
+//             btnOkBackground: '#4e73df',
+//             btnOkShadow: 'rgba(0, 0, 0, 0.5)',
+//             btnOkBorderColor: '#d4d4d4',
+//             callback: () => {
+//             }
+//         });
+//         sessionStorage.setItem('change', false);
+//     }
+// }
+// );
+
+//Điều kiện pick date
+$(function(){
+    var dtToday = new Date();
+    
+    var month = dtToday.getMonth() + 1;
+    var day = dtToday.getDate();
+    var year = dtToday.getFullYear();
+    if(month < 10)
+        month = '0' + month.toString();
+    if(day < 10)
+        day = '0' + day.toString();
+    
+    var maxDate = year + '-' + month + '-' + day;
+    $('#user-dob').attr('max', maxDate);
+});
 
 //Điều kiện email
 const isValidEmail = email => {
@@ -206,4 +254,18 @@ const setSuccess1 = element => {
     inputControl.classList.remove('failed');
     y = y + 1;
 
+};
+const setOkay = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.fail');
+    errorDisplay.innerText = '';
+    inputControl.classList.remove('failed');
+    x = x + 1;
+};
+const setOkay1 = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.fail');
+    errorDisplay.innerText = '';
+    inputControl.classList.remove('failed');
+    y = y + 1;
 };
