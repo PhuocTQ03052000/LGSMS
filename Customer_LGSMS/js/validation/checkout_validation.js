@@ -1,19 +1,18 @@
 // Lấy input
 let x = 0;
-let y = 0;
 const form = document.getElementById('form');
-const aname = document.getElementById('user-name');
-const email = document.getElementById('user-email');
-const phone = document.getElementById('user-phone');
-const address = document.getElementById('user-address');
-const dob = document.getElementById('user-dob');
+const aname = document.getElementById('fname');
+const email = document.getElementById('email');
+const phone = document.getElementById('phone');
+const address = document.getElementById('adr');
+
 
 //Chạy hàm validate form add
 form.addEventListener('submit', e => {
     e.preventDefault();
     x = 0;
     validateInputs();
-    if (x == 5) {
+    if (x == 4) {
         alertFunction();
     }
 });
@@ -24,7 +23,6 @@ const validateInputs = () => {
     const emailValue = email.value.trim();
     const nameValue = aname.value.trim();
     const addressValue = address.value.trim();
-    const dobValue = dob.value.trim();
 
     // Thông báo nhập số điện thoại
 
@@ -52,14 +50,8 @@ const validateInputs = () => {
     }
     //Thông báo tên nhân viên
     if (nameValue === '') {
-        setError(aname, 'Yêu cầu nhập họ và tên');
+        setError(aname, 'Yêu cần nhập họ và tên');
     } else {
         setSuccess(aname);
-    }
-    //Thông báo ngày sinh 
-    if (dobValue === '') {
-        setError(dob, 'Yêu cầu chọn ngày sinh');
-    } else {
-        setSuccess(dob);
     }
 };

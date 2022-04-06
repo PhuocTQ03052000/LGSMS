@@ -23,8 +23,6 @@
     <!-- Custom styles for this page -->
     <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="../assets/styles/custom_box.css" rel="stylesheet">
-    <link href="../css/fnon.min.css" rel="stylesheet">
-
 </head>
 
 
@@ -69,8 +67,8 @@
                         <div class="col-8 col-sm-12">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <span class="m-0 font-weight-bold text-primary">Phiếu thu</span>
-                                    <a href="business_information_order.html" class="order-voucher">Chuyển đơn hàng</a>
+                                    <span class="m-0 font-weight-bold text-primary">Đơn hàng</span>
+                                    <a href="Manager_view_information_voucher.html" class="order-voucher">Chuyển phiếu thu</a>
                                 </div>
                                 <form id="form" action="business_new_order.html">
                                     <div class="card-body">
@@ -82,80 +80,85 @@
                                                     hàng:</label>
                                                 <input type="text" class="border border-secondary w-100 p-2 rounded"
                                                     id="order-code" required value="LG240" />
-                                                    <br><br>
+                                                <br><br>
                                                 <label for="order-price" class="col-form-label">Tổng giá
                                                     tiền (VNĐ):</label>
                                                 <input type="number" readonly
                                                     class="border border-secondary w-100 p-2 rounded" id="order-price"
                                                     value="6589000" />
-                                                    <br><br>
-                                                <div class="form-group">
-                                                    <label for="order-deposit" class="col-form-label">Tiền cọc vỏ
-                                                        bình (VNĐ):</label>
-                                                    <input type="number"
-                                                        class="form-control border border-secondary p-2 rounded"
-                                                        id="order-deposit" />
-                                                    <div class="fail"></div>
-                                                </div>
-                                                <label for="staff-order" class="col-form-label">Nhân viên nhận
-                                                    đơn:</label>
-                                                <input type="text" readonly
-                                                    class="border border-secondary w-100 p-2 rounded" id="staff-order"
-                                                    value="Truong Quang Phuoc" />
-                                                    <br><br>
-                                                <label for="order-date" class="col-form-label">Ngày nhận
-                                                    đơn:</label>
-                                                <input type="text" readonly
-                                                    class="border border-secondary w-100 p-2 rounded" id="order-date"
-                                                    value="10/03/2022" />
-                                            </div>
-                                            <div class="col-8 col-sm-5">
-                                                <label for="voucher-code" class="col-form-label">Mã phiếu thu:</label>
-                                                <input type="text" readonly
-                                                    class="border border-secondary w-100 p-2 rounded" id="voucher-code"
-                                                    value="LG240" />
-                                                    <br><br>
-                                                <label for="customer-name" class="col-form-label">Tên khách
-                                                    hàng:</label>
-                                                <input type="text" readonly
-                                                    class="border border-secondary w-100 p-2 rounded" id="customer-name"
-                                                    value="Truong Gia Viet Anh" />
-                                                    <br><br>
-                                                <label for="order-status" class="col-form-label">Trạng
-                                                    thái:</label><br>
-                                                <select name="order-status" id="order-status"
-                                                    class="border border-secondary w-100 p-2 rounded">
-                                                    <option value="status-1">Đang xử lí</option>
-                                                    <option value="status-5">Hoàn thành</option>
-                                                </select>
                                                 <br><br>
-                                                <label for="order-note" class="col-form-label">Ghi chú:</label>
-                                                <textarea class="border border-secondary w-100 p-2 rounded"
-                                                    id="order-note" style="resize: none; overflow: auto;"></textarea>
-                                            </div>
+                                                <label for="order-deposit" class="col-form-label">Tiền cọc vỏ
+                                                    bình (VNĐ):</label>
+                                                <input type="number" readonly
+                                                    class="border border-secondary w-100 p-2 rounded" id="order-deposit"
+                                                    value="" />
+                                                <br><br>
+                                            
+                                            <label for="staff-order" class="col-form-label">Nhân viên nhận
+                                                đơn:</label>
+                                            <input type="text" readonly
+                                                class="border border-secondary w-100 p-2 rounded" id="staff-order"
+                                                value="Truong Quang Phuoc" />
+                                            <br><br>
+                                            <label for="order-date" class="col-form-label">Ngày nhận
+                                                đơn:</label>
+                                            <input type="text" readonly
+                                                class="border border-secondary w-100 p-2 rounded" id="order-date"
+                                                value="10/03/2022" />
                                         </div>
-                                        <div class="row justify-content-around">
-                                            <div class="col-4"></div>
-                                            <div class="col-4">
-                                                <div class="form-group">
-                                                    <label for="cus-pay" style="float: right;"
-                                                        class="col-form-label">Tổng tiền khách phải trả (VNĐ):</label>
-                                                    <input type="number" style="text-align: right;font-size: 36px;" readonly
-                                                        class="form-control bg-white border-0" id="cus-pay" />
-                                                </div>
-                                                <div style="margin-top: 2%; float: right">
-                                                    <input type="submit" class="btn btn-primary submit px-3" value="Lưu" onclick="confirmFunction()"></input>
-                                                </div>
+                                        <div class="col-8 col-sm-5">
+                                            <label for="voucher-code" class="col-form-label">Mã phiếu thu:</label>
+                                            <input type="text" readonly
+                                                class="border border-secondary w-100 p-2 rounded" id="voucher-code"
+                                                value="LG240" />
+                                            <br><br>
+                                            <label for="customer-name" class="col-form-label">Tên khách
+                                                hàng:</label>
+                                            <input type="text" readonly
+                                                class="border border-secondary w-100 p-2 rounded" id="customer-name"
+                                                value="Truong Gia Viet Anh" />
+                                            <br><br>
+                                            <label for="order-status" class="col-form-label">Trạng
+                                                thái:</label><br>
+                                            <select name="order-status" id="order-status"
+                                                class="border border-secondary w-100 p-2 rounded">
+                                                <option selected value="status-1">Đang xử lí</option>
+                                                <option disabled value="status-2">Hoàn thành</option>
+                                            </select>
+                                            <!-- tôi không biết để select box kiểu disabled từng lựa chọn thế kia được không, không dc thì dùng label box ở dưới nhé -->
+                                            <!-- <label for="order-status" class="col-form-label">Trạng
+                                                thái:</label>
+                                                <label type="text" class="border border-secondary w-100 p-2 rounded"
+                                                id="order-status">Đang xử lí</label> -->
+                                            <br><br>
+                                            <label for="order-note" class="col-form-label">Ghi chú:</label>
+                                            <textarea class="border border-secondary w-100 p-2 rounded" readonly
+                                                id="order-note" style="resize: none; overflow: auto;"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-around">
+                                        <div class="col-4"></div>
+                                        <div class="col-4">
+                                            <div class="form-group">
+                                                <label for="cus-pay" style="float: right;" class="col-form-label">Tổng
+                                                    tiền khách phải trả (VNĐ):</label>
+                                                <input type="number" style="text-align: right;font-size: 36px;" readonly
+                                                    class="form-control bg-white border-0" id="cus-pay" />
+                                            </div>
+                                            <div style="margin-top: 2%; float: right">
+                                                <input type="submit" class="btn btn-primary submit px-3" value="Lưu"
+                                                    onclick="confirmFunction()"></input>
                                             </div>
                                         </div>
                                     </div>
-                                </form>
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     </div>
     <!-- End of Content Wrapper -->
@@ -187,15 +190,15 @@
         var deposit = document.getElementById('order-deposit'),
             total = document.getElementById('order-price'),
             payment = document.getElementById('cus-pay');
-            const num = 0;
-            payment.value = total.value
+        const num = 0;
+        payment.value = total.value
         deposit.onchange = function () {
-            if(deposit.value ==""){
+            if (deposit.value == "") {
                 var result = parseFloat(total.value) - parseFloat(num);
                 payment.value = result;
-            }else{
-            var result = parseFloat(total.value) - parseFloat(deposit.value);
-            payment.value = !isNaN(result) ? result : '';
+            } else {
+                var result = parseFloat(total.value) - parseFloat(deposit.value);
+                payment.value = !isNaN(result) ? result : '';
             }
         };
     </script>
