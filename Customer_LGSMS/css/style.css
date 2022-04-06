@@ -677,6 +677,13 @@ select {
     box-shadow: none;
 }
 
+.quantity.buttons_added button a {
+    text-decoration: none;
+    color: #555;
+    font-size: 18px;
+    font-weight: 600;
+}
+
 .quantity.buttons_added .minus,
 .quantity.buttons_added .plus {
     padding: 7px 10px 8px;
