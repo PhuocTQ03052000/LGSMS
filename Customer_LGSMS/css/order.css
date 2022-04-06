@@ -64,7 +64,7 @@
 
 .project-box {
     width: 1200px;
-    padding: 15px;
+    padding: 10px;
     border: 1px solid #eeeeee;
     border-radius: 5px;
     margin: 20px;
@@ -77,10 +77,75 @@
     border-radius: 5px;
 }
 
-.column {
-    float: left;
-    width: 25%;
+.project-container a {
+    text-decoration: none;
+    color: #555;
+}
+
+.item1 {
+    grid-area: header;
+    text-align: right;
+    border-bottom: 2px solid #ff6f3b;
+}
+
+.item2 {
+    grid-area: menu;
+}
+
+.item3 {
+    grid-area: main;
+}
+
+.item4 {
+    grid-area: right;
+    text-align: right;
+    color: #ff6f3b;
+    font-weight: 400;
+}
+
+.item5 {
+    grid-area: footer;
+    text-align: right;
+}
+
+.item5 p {
+    font-size: 20px;
+}
+
+.item5 span {
+    font-weight: 500;
+    font-size: 20px;
+    color: #FF512F;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'header header header header header header' 'menu main main main right right' 'menu footer footer footer footer footer';
     padding: 10px;
+}
+
+.grid-container a {
+    text-decoration: none;
+}
+
+.grid-container>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+.option3 {
+    background-image: linear-gradient(to right, #FF512F 0%, #F09819 51%, #FF512F 100%);
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    float: right;
+}
+
+.option3:hover {
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
 }
 
 
@@ -96,7 +161,7 @@
 /* Responsive layout - makes a two column-layout instead of four columns */
 
 @media screen and (max-width: 900px) {
-    .column {
+    .project-box {
         width: 50%;
     }
 }
@@ -105,7 +170,7 @@
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 
 @media screen and (max-width: 600px) {
-    .column {
+    .project-box {
         width: 100%;
     }
 }

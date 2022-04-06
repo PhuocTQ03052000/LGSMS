@@ -40,37 +40,16 @@
                         </div>
                     </div>
                 </td>
-                <td><input type="number" value="1" min="1"></td>
-                <td>$50</td>
-            </tr>
-            <tr>
                 <td>
-                    <div class="cart-info">
-                        <img src="/images/buy-2.jpg">
-                        <div class="">
-                            <p>Product Name</p>
-                            <small>Product price</small><br>
-                            <a href="#">Xóa</a>
-                        </div>
+                    <div class="quantity buttons_added">
+                        <input type="button" value="-" class="minus">
+                        <input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+                        <input type="button" value="+" class="plus">
                     </div>
                 </td>
-                <td><input type="number" value="1" min="1"></td>
                 <td>$50</td>
             </tr>
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="/images/buy-3.jpg">
-                        <div class="">
-                            <p>Product Name</p>
-                            <small>Product price</small><br>
-                            <a href="#" value="remove">Xóa</a>
-                        </div>
-                    </div>
-                </td>
-                <td><input type="number" value="1" min="1"></td>
-                <td>$50</td>
-            </tr>
+
         </table>
         <div class="total-price">
             <table>
@@ -99,6 +78,7 @@
 
     <script src="/js/jquery-3.6.0.min.js"></script>
     <script src="/js/include-html.min.js"></script>
+    <script src="/js/cart.js"></script>
 
 </body>
 
