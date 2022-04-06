@@ -11,8 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/fnon.min.css" rel="stylesheet">
+    <link href="../css/custom_box.css" rel="stylesheet">
 
 </head>
 
@@ -24,21 +27,38 @@
     <div class="small-container row-checkout">
         <div class="col-75">
             <div class="container-checkout">
-                <form action="/action_page.php">
+                <form action="/action_page.php" id="form">
                     <div class="row-checkout">
                         <div class="col-50">
                             <h3>Thông tin giao hàng</h3>
-                            <label for="fname"><i class="fa fa-user"></i> Tên*</label>
-                            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
-                            <label for="phone"><i class="fa fa-phone"></i> Điện thoại*</label>
-                            <input type="text" id="phone" name="phone" placeholder="0123456789">
-                            <label for="email"><i class="fa fa-envelope"></i> Email<small>(tùy chọn)</small></label>
-                            <input type="text" id="email" name="email" placeholder="john@example.com">
-                            <label for="adr"><i class="fa fa-address-card"></i> Địa chỉ*</label>
-                            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-                            <label for="note"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Ghi chú<small>(tùy chọn)</small></label>
-                            <input type="text" id="note" name="note" placeholder="something">
-                            <p class="checkout_note">Quý khách hàng lưu ý phần <strong>"Tiền cọc vỏ"</strong> và <strong>"Tổng tiền"</strong> sẽ được cập nhật sau khi nhân viên cửa hàng liên hệ để xác nhận thông tin đơn hàng.</p>
+                            <div class="form-group">
+                                <label for="fname"><i class="fa fa-user"></i> Tên*</label>
+                                <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                <div class="fail"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone"><i class="fa fa-phone"></i> Điện thoại*</label>
+                                <input type="text" id="phone" name="phone" placeholder="0123456789">
+                                <div class="fail"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="fa fa-envelope"></i> Email<small>(tùy chọn)</small></label>
+                                <input type="text" id="email" name="email" placeholder="john@example.com">
+                                <div class="fail"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="adr"><i class="fa fa-address-card"></i> Địa chỉ*</label>
+                                <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                <div class="fail"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="note"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Ghi
+                                    chú<small>(tùy chọn)</small></label>
+                                <input type="text" id="note" name="note" placeholder="something">
+                            </div>
+                            <p class="checkout_note">Quý khách hàng lưu ý phần <strong>"Tiền cọc vỏ"</strong> và
+                                <strong>"Tổng tiền"</strong> sẽ được cập nhật sau khi nhân viên cửa hàng liên hệ để xác
+                                nhận thông tin đơn hàng.</p>
                         </div>
                     </div>
                     <input type="submit" value="Đặt hàng" class="btnCheckOut">
@@ -47,7 +67,8 @@
         </div>
         <div class="col-25">
             <div class="container-checkout">
-                <h4>Giỏ hàng <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+                <h4>Giỏ hàng <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span>
+                </h4>
                 <p><a href="#">Product 1</a> <span class="price">$15</span></p>
                 <p><a href="#">Product 2</a> <span class="price">$5</span></p>
                 <p><a href="#">Product 3</a> <span class="price">$8</span></p>
@@ -64,8 +85,12 @@
     <div include-html="footer.html" id="footer"></div>
     <!--js for toggle menu-->
     <!-- <script src="/js/header.js"></script> -->
-    <script src="/js/jquery-3.6.0.min.js"></script>
-    <script src="/js/include-html.min.js"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/include-html.min.js"></script>
+    <script src="../js/fnon.min.js"></script>
+    <script src="../js/validation/checkout_validation.js">
+    </script>
+    <script src="../js/validation/alert.js"></script>
 
 
 
