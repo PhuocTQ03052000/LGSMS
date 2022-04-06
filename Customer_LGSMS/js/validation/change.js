@@ -26,8 +26,9 @@ const validateInputs = () => {
     //Thông báo nhập mật khẩu
     if (new_passValue === '') {
         setError(newpass, 'Yêu cầu nhập mật khẩu');
-    } else if (new_passValue.length < 8) {
-        setError(newpass, 'Mật khẩu tối thiểu 8 kí tự.')
+    } else if (!isValidPass(new_passValue)) {
+        setError(newpass, 'Mật khẩu tối thiểu 8 kí tự có ít nhất 1 số và 1 chữ hoa.')
+        console.log(new_passValue)
     } else {
         setSuccess(newpass);
     }

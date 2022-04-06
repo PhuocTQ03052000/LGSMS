@@ -60,6 +60,8 @@ const validateInputs = () => {
     //Thông báo tên nhân viên
     if (usernameValue === '') {
         setError(username, 'Yêu cầu nhập tên đăng nhập');
+    }else if (isValidUsername(usernameValue)) {
+        setError(username, 'Tên tài khoản không được có ký tự đặc biệt')
     } else {
         setSuccess(username);
     }

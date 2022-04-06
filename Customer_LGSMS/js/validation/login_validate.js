@@ -58,14 +58,16 @@ const validateInputs1 = () => {
     //Thông báo tên tài khoản
     if (regiaccValue === '') {
         setError(regiacc, 'Yêu cầu tên tài khoản');
+    }else if (isValidUsername(regiaccValue)) {
+        setError(regiacc, 'Không được có ký tự đặc biệt')
     } else {
         setOkay(regiacc);
     }
     //Thông báo nhập mật khẩu
     if (regipassValue === '') {
         setError(regipass, 'Yêu cầu nhập mật khẩu');
-    } else if (regipassValue.length < 8) {
-        setError(regipass, 'Mật khẩu tối thiểu 8 kí tự.')
+    } else if (!isValidPass(regipassValue)) {
+        setError(regipass, 'Mật khẩu tối thiểu 8 kí tự có ít nhất 1 số và 1 chữ hoa.')
     } else {
         setSuccess(regipass);
     }
