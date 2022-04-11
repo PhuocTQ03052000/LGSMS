@@ -14,6 +14,7 @@ nav {
     justify-content: space-between;
     text-align: center;
     padding: 15px 30px;
+    z-index: 1;
 }
 
 nav .icon {
@@ -40,11 +41,13 @@ nav ol li a {
     text-transform: capitalize;
     letter-spacing: 1px;
     padding: 5px 10px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    font-weight: 500;
 }
 
 nav ol li:hover a {
     background: #fff;
-    color: #0a5071;
+    color: #555;
     border-radius: 5px;
 }
 

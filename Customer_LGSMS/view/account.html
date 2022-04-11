@@ -11,11 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet" type="text/css">
-    <link href="../css/fnon.min.css" rel="stylesheet">
-    <link href="../css/custom_box.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -24,49 +21,31 @@
     <!--Account-->
     <div class="account-page">
         <div class="container">
-            <div class="logo">
-                <a href="#"><img src="../images/logoNgang.PNG" width="125px" alt=""></a>
+            <div class="icon">
+                <a href="home.html">LGS <b style="color: red;">M</b>S</a>
             </div>
             <div class="row">
                 <div class="col-2">
-                    <img src="../images/account.png" width="100%">
+                    <img src="/images/account.png" width="100%">
                 </div>
                 <div class="col-2">
-                    <div class="form-container" >
+                    <div class="form-container">
                         <div class="form-btn">
                             <span onclick="login()">Đăng Nhập</span>
                             <span onclick="register()">Đăng Ký</span>
                             <hr id="indicator">
                         </div>
-                        <form id="loginForm" style="width: 100%;">
-                            <div class="form-group">
-                                <input type="text" placeholder="Tên đăng nhập" id="username">
-                                <div class="fail"></div>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" placeholder="Mật khẩu" id="password">
-                                <div class="fail"></div>
-                            </div>
+                        <form id="loginForm">
+                            <input type="text" placeholder="Tên đăng nhập">
+                            <input type="password" placeholder="Mật khẩu">
                             <button type="submit" class="btn">Đăng Nhập</button>
                             <a href="forgotPassword.html">Quên mật khẩu?</a>
                         </form>
-                        <form id="registerForm" style="width: 100%;">
-                            <div class="form-group">
-                                <input type="text" placeholder="Tên đăng nhập" id="refiUsername">
-                                <div class="fail"></div>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" placeholder="Email" id="regiEmail">
-                                <div class="fail"></div>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" placeholder="Mật khẩu" id="regiPass">
-                                <div class="fail"></div>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" placeholder="Xác nhận mật khẩu" id="regiRepass">
-                                <div class="fail"></div>
-                            </div>
+                        <form id="registerForm">
+                            <input type="text" placeholder="Tên đăng nhập">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Mật khẩu">
+                            <input type="password" placeholder="Xác nhận mật khẩu">
                             <button type="submit" class="btn">Đăng Ký</button>
                         </form>
 
@@ -80,13 +59,10 @@
     <div include-html="footer.html" id="footer"></div>
     <!--js for toggle menu-->
     <!-- <script src="/js/header.js"></script> -->
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/include-html.min.js"></script>
-    
-    <script src="../js/fnon.min.js"></script>
-    <script src="../js/login_register.js"></script>
-    <script src="../js/validation/login_validate.js"></script>
-    <script src="../js/validation/alert.js"></script>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/include-html.min.js"></script>
+
+    <script src="/js/login_register.js"></script>
 </body>
 
 </html>
