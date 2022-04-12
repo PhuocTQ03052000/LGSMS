@@ -15,7 +15,7 @@
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+        >
 
     <!-- Custom styles for this template -->
     <link href="../assets/styles/sb-admin-2.min.css" rel="stylesheet">
@@ -400,17 +400,17 @@
                                             </div>
                                             <br>
                                             <div class="form-group">
-                                                <input type="checkbox" onclick="return false;" checked id="import-type" name="import-type"
+                                                <input type="checkbox" checked id="import-type-info" name="import-type"
                                                     value="customer">
                                                 <label for="import-type" class="col-form-label">Nhập hàng từ
                                                     khách</label>
                                             </div>
                                             <!-- <br> -->
-                                            <div class="modal-footer">
+                                            <!-- <div class="modal-footer">
                                                 <input type="submit" class="btn btn-primary" value="Nhập"></input>
                                                 <button type="button" class="btn btn-secondary"
                                                     data-dismiss="modal">Hủy</button>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -448,6 +448,8 @@
     <script src="../js/valdation/import_validate.js"></script>
     <script src="../js/valdation/alert.js"></script>
     <script src="../js/fnon.min.js"></script>
+    <script>$("#import-type-info").click(function() { return false; });
+    </script>
 </body>
 
 </html>
